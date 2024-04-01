@@ -3,7 +3,7 @@ body {
     overflow: hidden;
     margin: 0; 
     width: 100%;
-}
+} 
 
 #aba {
     display: flex; /* Define o elemento como um contêiner flexível */
