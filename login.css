@@ -1,0 +1,202 @@
+body {
+    background: #FFF;
+    overflow: hidden;
+    margin: 0; 
+    width: 100%;
+}
+
+#aba {
+    display: flex; /* Define o elemento como um contêiner flexível */
+    flex-direction: row; /* Alinha os itens filhos horizontalmente */
+    width: 80%;
+    padding: 0% 15%;
+    box-sizing: border-box;
+    
+}
+
+#btop1{
+    background: #295872;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    margin: 0px 5px 0px 0px;
+    height: 30px;
+    width: 200px;
+    border-radius: 15px 15px 0% 0%;
+    float: left;
+}
+
+#btop2{
+    background: #4292bf;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    margin: 0px 5px 0px 0px;
+    height: 30px;
+    width: 200px;
+    border-radius: 15px 15px 0% 0%;
+    float: left;
+}
+
+#btop3{
+    background: #4292bf;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    text-align: center;
+    line-height: 2;
+    margin: 0px 5px 0px 0px;
+    height: 30px;
+    width: 200px;
+    border-radius: 15px 15px 0% 0%;
+    float: left;
+}
+
+#bprincipal {
+    background: #295872;
+    height: 130px; /* Ajuste conforme necessário */
+    width: calc(100%-2%);
+    box-sizing: border-box;
+    padding: 1% 15%;
+    overflow: auto; /* Adiciona barras de rolagem se necessário */
+}
+
+.logo{
+    text-align: center;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    line-height: 2;
+	color: white;
+    float: left;
+}
+
+.ladodireito{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+    text-align: right;
+    line-height: 9;
+    float: right;
+    width: 50%;
+}
+
+.clear{
+    clear: both;
+}
+
+.center{
+    text-align: center;
+}
+
+.imgbprincipal{
+    height: 20px;
+}
+.imgmoto{
+    height: 25px;
+}
+
+/* Link não visitado
+a:link {
+    color: white;
+}
+
+Link visitado
+a:visited {
+    color: white;
+}
+
+Mouse sobre o link
+a:hover {
+    color: white;
+}
+
+/* Link ativo (clicado)
+a:active {
+    color: white;
+} */
+
+a{
+    text-decoration: none; 
+}
+
+/*Estilos para link da logo*/
+.logo a:link{
+    color: #FFF; 
+}
+
+.logo a:visited{
+    color: #FFF; 
+}
+
+.logo a:hover{
+    color: #FFF; 
+}
+
+.logo a:active{
+    color: #FFF; 
+}
+
+/* Estilos para links dentro da classe .ladodireito */
+.ladodireito a:link {
+    color: #FFF; 
+}
+
+.ladodireito a:visited {
+    color: #FFF; 
+}
+
+.ladodireito a:hover {
+    color: black; 
+}
+
+.ladodireito a:active {
+    color: #FFF; 
+}
+
+/* Estilos para links dentro do elemento com id #aba */
+#aba a:link {
+    color: #FFF; 
+}
+
+#aba a:visited {
+    color: #FFF; 
+}
+
+#aba a:hover {
+    color: black; 
+}
+
+#aba a:active {
+    color: #FFF; 
+}
+
+#barra2 {
+    background: #123241;
+    height: 75px;
+    width: calc(100%-2%);
+    box-sizing: border-box;
+    line-height: 1;
+    padding: 0% 15%;
+}
+
+main{
+    margin: 2% 15%;
+    width: calc(100%-2%);
+    
+}
+
+.barlog{
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    color: white;
+    float: left;
+}
+
+.login{
+    
+}
