@@ -7,179 +7,78 @@
   <title>Motosync - Aluguel de Motos</title>
    
   <!-- Estilos CSS -->
-  <link rel="stylesheet" type="text/css" href="barra.css">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="stylesheet" type="text/css" href="main-index.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
-  
-  <style>
-    /* Estilos CSS adicionais */
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-image: url('C:/Users/pedro/Desktop/motosync_pedro/fundo20.png');
-      background-size: 100%;
-    }
-    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-    }
-    
-    nav {
-      background-color: #555;
-      padding: 5px;
-      text-align: center;
-    }
-    
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      z-index: 1;
-    }
-    
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-    
-    .dropdown-content a:hover {background-color: #ddd;}
-    
-    .dropdown:hover .dropdown-content {display: block;}
-    
-    .form-container {
-      background-color: #f9f9f9;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 50%;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    
-    .form-container h2 {
-      text-align: center;
-    }
-    
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    form label {
-      margin-bottom: 10px;
-    }
-    
-    form input[type="date"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    
-    form button[type="submit"] {
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    
-    form button[type="submit"]:hover {
-      background-color: #555;
-    }
-    
-    .carousel {
-      display: flex;
-      scroll-snap-type: x mandatory;
-      width: 80%; /* Reduzindo um pouco a largura do carrossel */
-      margin: 0 auto; /* Centraliza o carrossel horizontalmente */
-    }
 
-    .slide {
-      flex: 0 0 auto;
-      width: 100%;
-      scroll-snap-align: start;
-    }
-
-    .slide img {
-      max-width: 70%; /* Alterei de 80% para 100% */
-      height: auto;
-    }
-  </style>
 </head>
 
 <body>
 
   <header>
-            <div id="aba">
 
-                <div id="btop1">
+    <div id="aba">
 
-                    <div><a href="index.html">ALUGAR</a></div>
+        <div id="btop1">
 
-                </div><!--Fim btop1-->
+            <div><a href="index.html">ALUGAR</a></div>
 
-                <div id="btop2">
+        </div><!--Fim btop1-->
 
-                    <div><a href="promocoes.html">PROMOÇÕES</a></div>
+        <div id="btop2">
 
-                </div><!--Fim btop2-->
+            <div><a href="promocoes.html">PROMOÇÕES</a></div>
 
-                <div id="btop3">
+        </div><!--Fim btop2-->
 
-                    <div><a href="passeios.html">PASSEIOS</a></div>
+        <div id="btop3">
 
-                </div><!--Fim btop3-->
+            <div><a href="passeios.html">PASSEIOS</a></div>
 
-            </div><!--Fim aba-->
+        </div><!--Fim btop3-->
 
-            <div class="clear"></div>
+    </div><!--Fim aba-->
 
-            <div id="bprincipal">
-        
-                <div class="top">
+    <div class="clear"></div>
 
-                    <div class="logo"><a href="index.html">MotoSync</a></div>
+    <div id="bprincipal">
 
-                    <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal" src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="">MINHAS RESERVAS</a> &nbsp; |  &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a> &nbsp; | <a href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
+        <div class="top">
 
-                </div><!--Fim top-->
+            <div class="logo"><a href="index.html">MotoSync</a></div>
 
-            </div> <!--Fim bprincipal-->
+            <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal" src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="">MINHAS RESERVAS</a> &nbsp; |  &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a> &nbsp; | <a href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
 
-        </header>
+        </div><!--Fim top-->
+
+    </div> <!--Fim bprincipal-->
+
+  </header>
   
-  <div class="form-container">
-    <h2>Escolha a data de retirada e devolução da moto</h2>
-    <form>
-      <label for="pickup-date">Data de Retirada:</label>
-      <input type="date" id="pickup-date" required>
+  <div clas="fundo">
+    <div class="form-container">
+      <div class="inside">
+        <h2>Escolha a data de retirada e devolução da moto</h2>
+        <form>
+          <label for="pickup-date">Data de Retirada:</label>
+          <input type="date" id="pickup-date" required>
 
-      <label for="return-date">Data de Devolução:</label>
-      <input type="date" id="return-date" required>
+          <label for="return-date">Data de Devolução:</label>
+          <input type="date" id="return-date" required>
 
-      <button type="submit">Confirmar</button>
-    </form>
-  </div>
+          <button type="submit">Confirmar</button>
+        </form>
+      </div> <!-- Fim inside -->
+    </div> <!-- Fim form-container -->
+  </div> <!-- Fim inside -->
   
   <div class="container">
     <section id="nova-reserva">
       <div class="carousel">
-        <div class="slide"><img src="C:/Users/pedro/Desktop/motosync_pedro/cbr1000.jpg" alt="Moto 1"></div>
-        <div class="slide"><img src="C:/Users/pedro/Desktop/motosync_pedro/ninja400.jpg" alt="Moto 2"></div>
-        <!-- Adicione mais imagens conforme necessário -->
+        <div class="slide"><img src="imagens/r1000.png"></div>
+        <div class="slide"><img src="imagens/mt03.png"></div>
+        
       </div>
     </section>
   </div>

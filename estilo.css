@@ -1,17 +1,21 @@
 body {
     background: #FFF;
-    overflow: hidden;
+    overflow: auto;
     margin: 0; 
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
 } 
 
+/* vvvvvvvvvvvvvvvv Header vvvvvvvvvvvvvvvv */
+
 #aba {
-    display: flex; /* Define o elemento como um contêiner flexível */
-    flex-direction: row; /* Alinha os itens filhos horizontalmente */
+    display: flex; 
+    flex-direction: row; 
     width: 80%;
     padding: 0% 15%;
     box-sizing: border-box;
-    
+    margin: 0;
 }
 
 #btop1{
@@ -55,11 +59,10 @@ body {
 
 #bprincipal {
     background: #295872;
-    height: 130px; /* Ajuste conforme necessário */
+    height: 110px;
     width: calc(100%-2%);
     box-sizing: border-box;
-    padding: 1% 15%;
-    overflow: auto; /* Adiciona barras de rolagem se necessário */
+    padding: 0% 15%;
 }
 
 .logo{
@@ -97,26 +100,6 @@ body {
 .imgmoto{
     height: 25px;
 }
-
-/* Link não visitado
-a:link {
-    color: white;
-}
-
-Link visitado
-a:visited {
-    color: white;
-}
-
-Mouse sobre o link
-a:hover {
-    color: white;
-}
-
-/* Link ativo (clicado)
-a:active {
-    color: white;
-} */
 
 a{
     text-decoration: none; 
@@ -172,3 +155,5 @@ a{
 #aba a:active {
     color: #FFF; 
 }
+
+/* ^^^^^^^^^^^^^^^^ Fim Header ^^^^^^^^^^^^^^^^ */
