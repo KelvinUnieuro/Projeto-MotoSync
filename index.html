@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Motosync - Aluguel de Motos</title>
+  <link rel="icon" href="imagens/icone.png" type="image/x-icon">
    
   <!-- Estilos CSS -->
   <link rel="stylesheet" type="text/css" href="estilo.css">
-  <link rel="stylesheet" type="text/css" href="main-index.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"/>
 
@@ -39,94 +39,147 @@
             <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal" src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="">MINHAS RESERVAS</a> &nbsp; |  &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a> &nbsp; | <a href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
         </div><!--Fim top-->
     </div> <!--Fim bprincipal-->
-
   </header>
   
   <main>
     <style>
       .form-container {
-    background-color: #123241;
-    margin: 0 0 2% 0;
-    padding:1% 15%;
-    width: calc(100%-2%);
-}
+        display: flex;
+        background-color: #123241;
+        flex-direction: row;
+        margin: 0 0 2% 0;
+        padding:1% 15%;
+        width: calc(100%-2%);
+      }
 
-.inside{
-    width: 100%;
-}
+      .inside{
+        width: 100%;
+      }
 
-.form-container h2 {
-    text-align: center;
-}
+      .form-container h2 {
+        text-align: left;
+      }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        align-items: center;
+      }
 
-form label {
-    margin-bottom: 10px;
-}
+      .aluguel{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
 
-form input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
+      form label {
+        margin-bottom: 10px;
+      }
 
-.retirada{
-    width: 80%;
-}
+      #local-retirada{
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
 
-.devolucao{
-    width: 80%;
-}
+      #local-devolucao{
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
 
-form button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
+      form input[type="date"] {
+        padding: 15px;
+        margin: 0px 0px 0px 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
 
-form button[type="submit"]:hover {
-    background-color: #555;
-}
+      #data-retirada{
+        width: 100%;
+      }
 
-.carousel {
-    display: flex;
-    scroll-snap-type: x mandatory;
-    width: 80%; /* Reduzindo um pouco a largura do carrossel */
-    margin: 0 auto; /* Centraliza o carrossel horizontalmente */
-}
+      #data-devolucao{
+        width: 100%;
+      }
 
-.slide {
-    flex: 0 0 auto;
-    width: 100%;
-    scroll-snap-align: start;
-}
+      #hora-retirada{
+        margin: 0px 0px 0px 10px;
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
 
-.slide img {
-    max-width: 70%; /* Alterei de 80% para 100% */
-    height: auto;
-}
+      #hora-devolucao{
+        margin: 0px 0px 0px 10px;
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 10px;
+      }
+
+      form button[type="submit"] {
+        padding: 15px 25px;
+        margin: 0px 0px 10px 10px;
+        background-color: #205f81;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      form button[type="submit"]:hover {
+        background-color: #4292bf;
+      }
+
+      .carousel {
+        display: flex;
+        scroll-snap-type: x mandatory;
+        width: 80%; 
+        margin: 0 auto; 
+      }
+
+      .slide {
+        flex: 0 0 auto;
+        width: 100%;
+        scroll-snap-align: start;
+      }
+
+      .slide img {
+        max-width: 70%; 
+        height: auto;
+      }
     </style>
-    <div clas="fundo">
+
+    <div class="fundo">
       <div class="form-container">
         <div class="inside">
-          <h2>Escolha a data de retirada e devolução da moto</h2>
-          <form>
-            <label for="pickup-date">Data de Retirada:</label>
-            <input class="retirada" type="date" id="pickup-date" required>
-
-            <label for="return-date">Data de Devolução:</label>
-            <input class="devolucao" type="date" id="return-date" required>
-
-            <button type="submit">Confirmar</button>
-          </form>
+          <h2>Alugue uma moto</h2>
+          
+          <div class="aluguel">
+            <form>
+              <label for="local-retirada">Local de retirada e devolução</label>
+              <input type="text" id="local-retirada" placeholder="Onde você quer retirar a moto?">
+              <input type="text" id="local-devolucao" placeholder="Onde você quer devolver a moto?">
+              <button type="submit">Confirmar</button>
+            </form>
+    
+            <form>
+              <label for="data-retirada">Data de retirada e devolução</label>
+              <input type="date" id="data-retirada">
+              <input type="date" id="data-devolucao" placeholder="Data de Devolução">
+            </form>
+    
+            <form>
+              <label for="hora-retirada">Horário de retirada e devolução</label>
+              <input type="time" id="hora-retirada">
+              <input type="time" id="hora-devolucao" placeholder="Horário da Devolução">
+            </form> 
+          </div> <!-- Fim aluguel -->
         </div> <!-- Fim inside -->
       </div> <!-- Fim form-container -->
     </div> <!-- Fim inside -->
@@ -155,7 +208,11 @@ form button[type="submit"]:hover {
       });
     </script>
 
-</main>
+  </main>
+
+  <footer>
+    
+  </footer>
 
 </body>
 
