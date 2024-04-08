@@ -48,7 +48,7 @@
         background-color: #123241;
         flex-direction: row;
         margin: 0 0 2% 0;
-        padding:1% 15%;
+        padding: 0% 15% 1% 15%;
         width: calc(100%-2%);
       }
 
@@ -63,68 +63,73 @@
       form {
         display: flex;
         flex-direction: column;
-        margin-bottom: 50px;
+        margin-bottom: 5px;
         align-items: center;
+      }
+
+      .form-aluguel{
+        
       }
 
       .aluguel{
         display: flex;
-        flex-direction: row;
-        gap: 40px;
+        flex-direction: column;
+        float: left;
+        width: 45%;
+        margin: 10px 0px 0px 0px;
       }
 
-      form label {
-        margin-bottom: 10px;
+      .aluguel2{
+        display: flex;
+        flex-direction: column;
+        float: left;
+        width: 20%;
+        margin: 10px 10px 0px 0px;
       }
 
       #local-retirada{
         padding: 15px;
-        width: 100%;
-        margin-bottom: 10px;
+        width: 90%;
         border-radius: 10px;
       }
 
       #local-devolucao{
         padding: 15px;
-        width: 100%;
-        margin-bottom: 10px;
-        border-radius: 10px;
-      }
-
-      form input[type="date"] {
-        padding: 15px;
-        margin: 0px 0px 0px 10px;
-        margin-bottom: 10px;
+        width: 90%;
         border-radius: 10px;
       }
 
       #data-retirada{
-        width: 100%;
+        padding: 15px;
+        width: 85%;
+        border-radius: 10px;
       }
 
       #data-devolucao{
-        width: 100%;
+        padding: 15px;
+        width: 85%;
+        border-radius: 10px;
       }
 
       #hora-retirada{
-        margin: 0px 0px 0px 10px;
         padding: 15px;
-        width: 100%;
-        margin-bottom: 10px;
+        width: 85%;
         border-radius: 10px;
       }
 
       #hora-devolucao{
-        margin: 0px 0px 0px 10px;
         padding: 15px;
-        width: 100%;
-        margin-bottom: 10px;
+        width: 85%;
         border-radius: 10px;
       }
 
-      form button[type="submit"] {
+      .botao {
+       padding: 50px 0px 0px 0px; 
+      }
+
+      .botao-aluguel {
         padding: 15px 25px;
-        margin: 0px 0px 10px 10px;
+        margin: 10px;
         background-color: #205f81;
         color: #fff;
         border: none;
@@ -132,7 +137,7 @@
         cursor: pointer;
       }
 
-      form button[type="submit"]:hover {
+      .botao-aluguel:hover {
         background-color: #4292bf;
       }
 
@@ -160,26 +165,29 @@
         <div class="inside">
           <h2>Alugue uma moto</h2>
           
-          <div class="aluguel">
-            <form>
-              <label for="local-retirada">Local de retirada e devolução</label>
-              <input type="text" id="local-retirada" placeholder="Onde você quer retirar a moto?">
-              <input type="text" id="local-devolucao" placeholder="Onde você quer devolver a moto?">
-              <button type="submit">Confirmar</button>
-            </form>
+          <div class="form-aluguel">
+            <div class="aluguel">
+              <form><label for="local-retirada">Local</label></form>
+              <form><input type="text" id="local-retirada" placeholder="Onde você quer retirar a moto?"></form>
+              <form><input type="text" id="local-devolucao" placeholder="Onde você quer devolver a moto?"></form>
+            </div> <!-- Fim aluguel -->
+          
+            <div class="aluguel2">
+              <form><label for="data-retirada">Data</label></form>
+              <form><input type="text" id="data-retirada" placeholder="Data da retirada" onfocus="(this.type='date')"></form>
+              <form><input type="text" id="data-devolucao" placeholder="Data da devolução" onfocus="(this.type='date')"></form>
+            </div> <!-- Fim aluguel -->
     
-            <form>
-              <label for="data-retirada">Data de retirada e devolução</label>
-              <input type="date" id="data-retirada">
-              <input type="date" id="data-devolucao" placeholder="Data de Devolução">
-            </form>
-    
-            <form>
-              <label for="hora-retirada">Horário de retirada e devolução</label>
-              <input type="time" id="hora-retirada">
-              <input type="time" id="hora-devolucao" placeholder="Horário da Devolução">
-            </form> 
-          </div> <!-- Fim aluguel -->
+            <div class="aluguel2">
+              <form><label for="hora-retirada">Horário</label></form>
+              <form><input type="text" id="hora-retirada" placeholder="Hora da retirada" onfocus="(this.type='time')"></form>
+              <form><input type="text" id="hora-devolucao" placeholder="Hora da devolução" onfocus="(this.type='time')"></form>
+            </div> <!-- Fim aluguel -->
+            
+            <div class="botao">
+              <button type="submit" class="botao-aluguel">Buscar</button>
+            </div>
+          </div> <!-- Fim form-aluguel -->
         </div> <!-- Fim inside -->
       </div> <!-- Fim form-container -->
     </div> <!-- Fim inside -->
