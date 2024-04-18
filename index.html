@@ -47,6 +47,7 @@
         display: flex;
         background-color: #123241;
         flex-direction: row;
+        height: 230px;
         margin: 0 0 2% 0;
         padding: 0% 15% 1% 15%;
         width: calc(100%-2%);
@@ -65,10 +66,6 @@
         flex-direction: column;
         margin-bottom: 5px;
         align-items: center;
-      }
-
-      .form-aluguel{
-        
       }
 
       .aluguel{
@@ -141,11 +138,63 @@
         background-color: #4292bf;
       }
 
+      @media screen and (max-width: 1252px){
+        .aluguel{
+          flex-direction: row;
+        }
+
+        .aluguel2{
+            flex-direction: row;
+        }
+
+        section{
+            width: 100%;
+        }
+      }
+    </style>
+
+    <section>
+      <div class="form-container">
+        <div class="inside">
+          <h2>Alugue uma moto</h2>
+          
+          <div class="form-aluguel">
+            <div class="aluguel">
+              <form><label for="local-retirada">Local</label></form>
+              <form><input type="text" id="local-retirada" placeholder="Onde você quer retirar a moto?"></form>
+              <form><input type="text" id="local-devolucao" placeholder="Onde você quer devolver a moto?"></form>
+            </div> <!-- Fim aluguel -->
+
+            
+          
+            <div class="aluguel2">
+              <form><label for="data-retirada">Data</label></form>
+              <form><input type="text" id="data-retirada" placeholder="Data da retirada" onfocus="(this.type='date')"></form>
+              <form><input type="text" id="data-devolucao" placeholder="Data da devolução" onfocus="(this.type='date')"></form>
+            </div> <!-- Fim aluguel2 -->
+    
+            <div class="aluguel2">
+              <form><label for="hora-retirada">Horário</label></form>
+              <form><input type="text" id="hora-retirada" placeholder="Hora da retirada" onfocus="(this.type='time')"></form>
+              <form><input type="text" id="hora-devolucao" placeholder="Hora da devolução" onfocus="(this.type='time')"></form>
+            </div> <!-- Fim aluguel2 -->
+            
+            <div class="botao">
+              <button type="submit" class="botao-aluguel">Buscar</button>
+            </div>
+          </div> <!-- Fim form-aluguel -->
+        </div> <!-- Fim inside -->
+      </div> <!-- Fim form-container -->
+    </section> <!-- Fim section -->
+    
+    <style>
+      
+
       .carousel {
         display: flex;
         scroll-snap-type: x mandatory;
-        width: 80%; 
-        margin: 0 auto; 
+        width: calc(100% - 5%);
+        justify-content: center; /* Centraliza os slides horizontalmente */
       }
 
       .slide {
@@ -160,44 +209,11 @@
       }
     </style>
 
-    <div class="fundo">
-      <div class="form-container">
-        <div class="inside">
-          <h2>Alugue uma moto</h2>
-          
-          <div class="form-aluguel">
-            <div class="aluguel">
-              <form><label for="local-retirada">Local</label></form>
-              <form><input type="text" id="local-retirada" placeholder="Onde você quer retirar a moto?"></form>
-              <form><input type="text" id="local-devolucao" placeholder="Onde você quer devolver a moto?"></form>
-            </div> <!-- Fim aluguel -->
-          
-            <div class="aluguel2">
-              <form><label for="data-retirada">Data</label></form>
-              <form><input type="text" id="data-retirada" placeholder="Data da retirada" onfocus="(this.type='date')"></form>
-              <form><input type="text" id="data-devolucao" placeholder="Data da devolução" onfocus="(this.type='date')"></form>
-            </div> <!-- Fim aluguel -->
-    
-            <div class="aluguel2">
-              <form><label for="hora-retirada">Horário</label></form>
-              <form><input type="text" id="hora-retirada" placeholder="Hora da retirada" onfocus="(this.type='time')"></form>
-              <form><input type="text" id="hora-devolucao" placeholder="Hora da devolução" onfocus="(this.type='time')"></form>
-            </div> <!-- Fim aluguel -->
-            
-            <div class="botao">
-              <button type="submit" class="botao-aluguel">Buscar</button>
-            </div>
-          </div> <!-- Fim form-aluguel -->
-        </div> <!-- Fim inside -->
-      </div> <!-- Fim form-container -->
-    </div> <!-- Fim inside -->
-    
     <div class="container">
       <section id="nova-reserva">
         <div class="carousel">
           <div class="slide"><img src="imagens/r1000.png"></div>
           <div class="slide"><img src="imagens/mt03.png"></div>
-          
         </div>
       </section>
     </div>
@@ -216,10 +232,15 @@
       });
     </script>
 
+    <br>
+    <br>
+
   </main>
 
   <footer>
-    
+    <barra id="footer-principal">
+      
+    </barra>
   </footer>
 
 </body>

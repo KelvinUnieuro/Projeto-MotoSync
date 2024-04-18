@@ -158,3 +158,29 @@ a{
 }
 
 /* ^^^^^^^^^^^^^^^^ Fim Header ^^^^^^^^^^^^^^^^ */
+
+
+
+/* vvvvvvvvvvvvvvvv Header vvvvvvvvvvvvvvvv */
+
+#footer-principal{
+    border: solid red 1px;
+    width: 80%;
+    height: 200px;
+}
+
+/* ^^^^^^^^^^^^^^^^ Fim Footer ^^^^^^^^^^^^^^^^ */
+
+@media screen and (max-width: 1252px){
+    #aba, .ladodireito{
+        display: none;
+    }
+    #bprincipal{
+        padding: 0% 3%;
+        height: 80px;
+    }
+
+    .logo{
+        font-size: 36px;
+    }
+}
