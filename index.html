@@ -61,6 +61,10 @@
         text-align: left;
       }
 
+      #mobile{
+          display: none;
+      }
+
       form {
         display: flex;
         flex-direction: column;
@@ -86,37 +90,43 @@
 
       #local-retirada{
         padding: 15px;
-        width: 90%;
+        width: 500px;
+        float: left;
         border-radius: 10px;
       }
 
       #local-devolucao{
         padding: 15px;
-        width: 90%;
+        width: 500px;
+        float: left;
         border-radius: 10px;
       }
 
       #data-retirada{
         padding: 15px;
-        width: 85%;
+        width: 250px;
+        float: left;
         border-radius: 10px;
       }
 
       #data-devolucao{
         padding: 15px;
-        width: 85%;
+        width: 250px;
+        float: left;
         border-radius: 10px;
       }
 
       #hora-retirada{
         padding: 15px;
-        width: 85%;
+        width: 200px;
+        float: left;
         border-radius: 10px;
       }
 
       #hora-devolucao{
         padding: 15px;
-        width: 85%;
+        width: 200px;
+        float: left;
         border-radius: 10px;
       }
 
@@ -138,25 +148,151 @@
         background-color: #4292bf;
       }
 
-      @media screen and (max-width: 1252px){
-        .aluguel{
-          flex-direction: row;
-        }
+      .form-aluguel-mobile{
+        display: none;
+      }
 
-        .aluguel2{
-            flex-direction: row;
+      @media screen and (max-width: 1252px){
+        .form-container {
+          height: 430px;
         }
 
         section{
-            width: 100%;
+          width: 100%;
         }
+
+        .form-container {
+          width: 100%;
+          padding: 0% 4%;
+          box-sizing: border-box;
+        }
+
+        #desktop{
+          display: none;
+        }
+
+        #mobile{
+          display: flex;
+        }
+
+        .aluguel-mobile{
+          display: flex;
+          flex-direction: row;
+          float: left;
+          width: calc(100%-2%);
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        .form-aluguel{
+          display: none; 
+        }
+
+        .form-aluguel-mobile{
+          display: flex; 
+          flex-direction: column;
+          justify-content: center; 
+          align-items: center; 
+          box-sizing: border-box;
+        }
+
+        #local-retirada{
+          padding: 15px;
+          width: 300px;
+          border-radius: 10px;
+          margin: 0 auto;
+          box-sizing: border-box;
+        }
+
+        #local-devolucao{
+          padding: 15px;
+          width: 300px;
+          border-radius: 10px;
+          margin: 0 auto;
+          box-sizing: border-box;
+        }
+
+        #data-retirada{
+          padding: 15px;
+          width: 150px;
+          border-radius: 10px 0px 0px 10px;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        #data-devolucao{
+          padding: 15px;
+          width: 150px;
+          border-radius: 10px 0px 0px 10px;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        #hora-retirada{
+          padding: 15px;
+          width: 150px;
+          border-radius: 0px 10px 10px 0px;
+          margin: 0;
+          box-sizing: border-box;
+        }
+       
+        #hora-devolucao{
+          padding: 15px;
+          width: 150px;
+          border-radius: 0px 10px 10px 0px;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+        .botao {
+          padding: 50px 0px 0px 0px; 
+        }
+
+        .botao-aluguel-mobile {
+          padding: 15px 126px;
+          margin: 10px;
+          background-color: #205f81;
+          color: #fff;
+          border-radius: 10px;
+          cursor: pointer;
+          float: left;
+        }
+
+        .botao-aluguel-mobile:hover {
+          background-color: #4292bf;
+        }
+
       }
     </style>
 
     <section>
       <div class="form-container">
         <div class="inside">
-          <h2>Alugue uma moto</h2>
+          <h2 id="desktop">Alugue uma moto</h2>
+          
+          <!-- Código Mobile -->
+          <div class="form-aluguel-mobile">
+            <h2 id="mobile">Faça sua reserva</h2>
+            <div class="aluguel-mobile">
+              <form><input type="text" id="local-retirada" placeholder="Onde você quer retirar a moto?"></form>
+            </div>
+            <div class="aluguel-mobile">
+              <form><input type="text" id="data-retirada" placeholder="Data da retirada" onfocus="(this.type='date')"></form>
+              <form><input type="text" id="hora-retirada" placeholder="Hora da retirada" onfocus="(this.type='time')"></form>
+            </div> 
+            <br><br>
+            <div class="aluguel-mobile">
+              <form><input type="text" id="local-devolucao" placeholder="Onde você quer devolver a moto?"></form>
+            </div>
+            <div class="aluguel-mobile">
+              <form><input type="text" id="data-devolucao" placeholder="Data da devolução" onfocus="(this.type='date')"></form>
+              <form><input type="text" id="hora-devolucao" placeholder="Hora da devolução" onfocus="(this.type='time')"></form>
+            </div>     
+            <div class="botao-mobile">
+              <button type="submit" class="botao-aluguel-mobile">Buscar</button>
+            </div>
+          </div> <!-- Fim form-aluguel-mobile -->
+          <!-- Fim Código Mobile -->
           
           <div class="form-aluguel">
             <div class="aluguel">
@@ -165,8 +301,6 @@
               <form><input type="text" id="local-devolucao" placeholder="Onde você quer devolver a moto?"></form>
             </div> <!-- Fim aluguel -->
 
-            
-          
             <div class="aluguel2">
               <form><label for="data-retirada">Data</label></form>
               <form><input type="text" id="data-retirada" placeholder="Data da retirada" onfocus="(this.type='date')"></form>
@@ -188,8 +322,6 @@
     </section> <!-- Fim section -->
     
     <style>
-      
-
       .carousel {
         display: flex;
         scroll-snap-type: x mandatory;

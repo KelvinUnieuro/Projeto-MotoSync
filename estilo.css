@@ -157,6 +157,21 @@ a{
     color: #FFF; 
 }
 
+@media screen and (max-width: 1252px){
+    #aba, .ladodireito{
+        display: none;
+    }
+    
+    #bprincipal{
+        padding: 0% 3%;
+        height: 80px;
+    }
+
+    .logo{
+        font-size: 36px;
+    }
+}
+
 /* ^^^^^^^^^^^^^^^^ Fim Header ^^^^^^^^^^^^^^^^ */
 
 
@@ -171,16 +186,3 @@ a{
 
 /* ^^^^^^^^^^^^^^^^ Fim Footer ^^^^^^^^^^^^^^^^ */
 
-@media screen and (max-width: 1252px){
-    #aba, .ladodireito{
-        display: none;
-    }
-    #bprincipal{
-        padding: 0% 3%;
-        height: 80px;
-    }
-
-    .logo{
-        font-size: 36px;
-    }
-}
