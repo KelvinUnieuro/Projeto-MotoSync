@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotoSync - Cadastro </title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        /* Estilos adicionais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        #login-form {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4292bf;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #327cad;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: #4292bf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .error-message {
+            color: #ff6347;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            text-align: center;
+            background-color: #123241;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <style>
+            #barra2 {
+                background: #123241;
+                height: 75px;
+                width: calc(100% - 0%);
+                box-sizing: border-box;
+                line-height: 1;
+                padding: 0% 15%;
+            }
+
+            #btop1, #btop2, #btop3, #btop4{
+                  background: #4292bf;
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-weight: bold;
+                  text-align: center;
+                  line-height: 2;
+                  margin: 0px 5px 0px 0px;
+                  height: 30px;
+                  width: 200px;
+                  border-radius: 15px 15px 0% 0%;
+                  float: left;
+                }
+        </style>
+
+        <div id="aba">
+            <div id="btop1">
+                <div><a href="index.html">HOME</a></div>
+            </div><!--Fim btop1-->
+
+            <div id="btop2">
+                <div><a href="alugar.html">ALUGAR</a></div>
+            </div><!--Fim btop2-->
+
+            <div id="btop3">
+                <div><a href="promocoes.html">PROMOÇÕES</a></div>
+            </div><!--Fim btop3-->
+
+            <div id="btop4">
+                <div><a href="passeios.html">PASSEIOS</a></div>
+            </div><!--Fim btop4-->
+        </div><!--Fim aba-->
+
+        <div class="clear"></div>
+
+        <div id="bprincipal">
+            <div class="top">
+                <div class="logo"><a href="index.html">MotoSync</a></div>
+                <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal" src="imagens/ajuda.png">&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img class="imgmoto" src="imagens/moto.png"></a> &nbsp; <a href="">MINHAS RESERVAS</a> &nbsp; | &nbsp; <a href="contato.html"><img class="imgbprincipal" src="imagens/zap.png">CONTATO</a> &nbsp; | <a href="login.html"> <img class="imgbprincipal" src="imagens/login.png">LOGIN</a></div>
+            </div><!--Fim top-->
+        </div> <!--Fim bprincipal-->
+    </header>
+
+    <div id="login-form">
+        <h2>Cadastre-se no MotoSync</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmar_senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+            </div>
+            <button type="button" id="btn-cadastrar">Cadastrar</button>
+            <div class="error-message" id="error-message"></div>
+        </form>
+        <div class="form-footer">
+            <span>Já tem uma conta? <a href="login.html">Faça login aqui</a></span>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para validação do formulário e envio dos dados
+        const form = document.getElementById('registration-form');
+        const errorMessage = document.getElementById('error-message');
+        const btnCadastrar = document.getElementById('btn-cadastrar');
+
+        btnCadastrar.addEventListener('click', function(event) {
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmar_senha').value;
+
+            if (senha !== confirmarSenha) {
+                errorMessage.textContent = 'As senhas não coincidem.';
+                errorMessage.style.display = 'block';
+            } else {
+                // Aqui você pode enviar os dados para um servidor backend ou armazená-los localmente
+                // Por exemplo, enviar via AJAX ou armazenar no Firebase
+
+                // Redirecionar para a página de sucesso
+                window.location.href = 'cadastro_sucesso.html';
+            }
+        });
+    </script>
+
+    <footer>
+        <p>© MotoSync - Todos direitos reservados</p>
+    </footer>
+</body>
+
+</html>

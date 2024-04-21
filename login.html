@@ -1,14 +1,137 @@
 <!DOCTYPE html>
-
 <html>
-	<head>
-		<title>MotoSync</title>
-		<meta charset="utf-8">
 
-        <link rel="stylesheet" type="text/css" href="estilo.css">
+<head>
+    <title>MotoSync</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
+        /* Estilos para o cabeçalho */
+        #btop1 {
+            background: #4292bf;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            line-height: 2;
+            margin: 0px 5px 0px 0px;
+            height: 30px;
+            width: 200px;
+            border-radius: 15px 15px 0% 0%;
+            float: left;
+        }
+
+        #barra2 {
+            background: #123241;
+            height: 75px;
+            width: calc(100% - 0%);
+            box-sizing: border-box;
+            line-height: 1;
+            padding: 0% 15%;
+        }
+
+        .barlog {
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            float: left;
+        }
+
+        /* Estilos para o formulário de login */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        #login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px;
+        }
+
+        #login-form {
+            width: 350px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4292bf;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #327cad;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .form-footer a {
+            color: #4292bf;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
         <style>
-            #btop1{
+            #btop1,
+            #btop2,
+            #btop3,
+            #btop4 {
                 background: #4292bf;
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: bold;
@@ -20,93 +143,85 @@
                 border-radius: 15px 15px 0% 0%;
                 float: left;
             }
+
+            #barra2 {
+                background: #123241;
+                height: 75px;
+                width: calc(100%-2%);
+                box-sizing: border-box;
+                line-height: 1;
+                padding: 0% 15%;
+            }
+
+            .barlog {
+                text-align: center;
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: white;
+                float: left;
+            }
         </style>
-	</head>
 
-	<body>
-        <header>
-            <style>
-                #btop1, #btop2, #btop3, #btop4{
-                    background: #4292bf;
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-weight: bold;
-                    text-align: center;
-                    line-height: 2;
-                    margin: 0px 5px 0px 0px;
-                    height: 30px;
-                    width: 200px;
-                    border-radius: 15px 15px 0% 0%;
-                    float: left;
-                }
+        <div id="aba">
+            <div id="btop1">
+                <div><a href="index.html">HOME</a></div>
+            </div><!--Fim btop1-->
 
-                #barra2 {
-                  background: #123241;
-                  height: 75px;
-                  width: calc(100%-2%);
-                  box-sizing: border-box;
-                  line-height: 1;
-                  padding: 0% 15%;
-                }
+            <div id="btop2">
+                <div><a href="alugar.html">ALUGAR</a></div>
+            </div><!--Fim btop2-->
 
-                .barlog{
-                  text-align: center;
-                  font-size: 30px;
-                  font-family: Arial, Helvetica, sans-serif;
-                  font-weight: bold;
-                  color: white;
-                  float: left;
-                }
-            </style>
+            <div id="btop3">
+                <div><a href="promocoes.html">PROMOÇÕES</a></div>
+            </div><!--Fim btop3-->
 
-            <div id="aba">
-                <div id="btop1">
-                    <div><a href="index.html">HOME</a></div>
-                </div><!--Fim btop1-->
+            <div id="btop4">
+                <div><a href="passeios.html">PASSEIOS</a></div>
+            </div><!--Fim btop4-->
+        </div><!--Fim aba-->
 
-                <div id="btop2">
-                    <div><a href="alugar.html">ALUGAR</a></div>
-                </div><!--Fim btop2-->
+        <div class="clear"></div>
 
-                <div id="btop3">
-                    <div><a href="promocoes.html">PROMOÇÕES</a></div>
-                </div><!--Fim btop3-->
+        <div id="bprincipal">
+            <div class="top">
+                <div class="logo"><a href="index.html">MotoSync</a></div>
+                <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal"
+                            src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img
+                            class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="reservas.html">MINHAS RESERVAS</a>
+                    &nbsp; | &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a>
+                    &nbsp; | <a href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
+            </div><!--Fim top-->
+        </div> <!--Fim bprincipal-->
 
-                <div id="btop4">
-                    <div><a href="passeios.html">PASSEIOS</a></div>
-                </div><!--Fim btop4-->
-            </div><!--Fim aba-->
+    </header>
 
-            <div class="clear"></div>
-
-            <div id="bprincipal">
-                <div class="top">
-                    <div class="logo"><a href="index.html">MotoSync</a></div>
-
-                    <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal" src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="reservas.html">MINHAS RESERVAS</a> &nbsp; |  &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a> &nbsp; | <a href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
-                </div><!--Fim top-->
-            </div> <!--Fim bprincipal-->
-
-            <div id="barra2">
-                <h2 class="barlog">Login</h2>
-            </div><!--Fim barra2-->
-        </header>
-
-        <main>
-            <div class="cadastro">
-                <div class="estrangeiro">
-                    <h3>Eu sou:</h3>
-                    <p>
-                        <input type="radio" name="nacionalidade" value="B">Brasileiro<br>  
-                        <input type="radio" name="nacionalidade" value="E">Estrangeiro<br><br>  
-                    </p>
+    <main>
+        <div id="login-container">
+            <div id="login-form">
+                <h2>Bem-vindo de volta ao MotoSync</h2>
+                <form action="processar_login.php" method="POST">
+                    <div class="form-group">
+                        <label for="username">Nome de Usuário ou E-mail:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+                <div class="form-footer">
+                    <span>Não tem uma conta? <a href="cadastro.html">Cadastre-se aqui</a></span>
                 </div>
             </div>
-        </main>
-
-	</body><!--Fim body-->
+        </div>
+    </main>
 
     <footer>
-        
+        <p>© MotoSync - Todos direitos reservados</p>
     </footer>
+
+</body><!-- Fim body -->
 
 </html>
