@@ -152,10 +152,9 @@ a{
 
 /* vvvvvvvvvvvvvvvv Header vvvvvvvvvvvvvvvv */
 
-#footer-principal{
-    border: solid red 1px;
-    width: 80%;
-    height: 200px;
+footer{
+    background: #295872;
+    color: #FFF
 }
 
 /* ^^^^^^^^^^^^^^^^ Fim Footer ^^^^^^^^^^^^^^^^ */

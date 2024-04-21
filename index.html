@@ -257,6 +257,7 @@
       }
     </style>
 
+    <!-- Início Banner Reserva -->
     <section>
       <div class="form-container">
         <div class="inside">
@@ -320,63 +321,249 @@
           </div> <!-- Fim form-aluguel -->
         </div> <!-- Fim inside -->
       </div> <!-- Fim form-container -->
-    </section> <!-- Fim section -->
+    </section> 
+    <!-- Fim Banner Reserva -->
 
     <br>
     <br>
 
+    <!-- Início Carrossel -->
+    <section>
+      <div id="carousel-motos-home" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+        <!-- Início slide carrossel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="imagens/Carrossel/gsx1000.png" class="d-block w-100" alt="Categoria 1">
+          </div>
+          <div class="carousel-item">
+              <img src="imagens/Carrossel/mt03-carrossel.png" class="d-block w-100" alt="Categoria 2">
+          </div>
+          <div class="carousel-item">
+              <img src="imagens/Carrossel/vulcan-carrossel.png" class="d-block w-100" alt="Categoria 3">
+          </div>
+          <div class="carousel-item">
+              <img src="imagens/Carrossel/scooter-carrossel.png" class="d-block w-100" alt="Categoria 4">
+          </div>
+          <div class="carousel-item">
+              <img src="imagens/Carrossel/r1000-carrossel.png" class="d-block w-100" alt="Categoria 5">
+          </div>
+        </div>
+        <!-- Fim Slide Carrossel -->
+      
+        <!-- Início anterior e próximo slide carrossel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-motos-home" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-motos-home" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <!-- Fim anterior e próximo slide carrossel -->
+      </div>  
 
-    <style>
-      @media screen and (max-width: 1252px) {}
-    </style>
+      <!-- Script JS para carrossel -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    </section> 
+    <!-- Fim Carrossel -->
 
-      <!-- Início slide carrossel -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="imagens/Carrossel/gsx1000.png" class="d-block w-100" alt="Categoria 1">
+    <br>
+    <br>
+
+    <!-- Inicio Justificativa-->
+    <section>
+      <style>
+        #justificativa{
+          background: #123241;
+          color: #FFF;
+          height: 500px;
+          border-radius: 10px;
+          padding: 20px;
+        }
+
+        #in-justificativa{
+          padding: 0% 15%;
+        }
+
+        #carrossel-mobile{
+          display: none;
+        }
+
+        #justificativa-desktop{
+          display: flex;
+        }
+
+        #justificativa-desktop img{
+            height: 200px;
+            width: auto;
+            border-radius: 20px;
+          }
+
+        .fundo{
+          background: white;
+          color: #000;
+          height: 380px;
+          width: 300px;
+          border-radius: 20px;
+          text-align: center;
+          padding: 0;
+          margin: 10px;
+        }
+
+        .fundo h1{
+          font-size: 22px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+          margin: 10px 0px 0px 0px;
+        }
+
+        .fundo p{
+          color: #295872;
+          font-size: 16px;
+          font-weight: bold;
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: left;
+          margin: 10px;
+        }
+
+        @media screen and (max-width: 1252px){
+          #justificativa-desktop{
+            display: none;
+          }
+
+          #justificativa{
+            height: 300px;
+            border-radius: 10px;
+          }
+
+          #in-justificativa{
+            padding: 0%;
+          }
+
+          #in-justificativa h1{
+            font-size: 22px;
+          }
+
+          #carrossel-mobile{
+            display: flex;
+          }
+        }
+      </style>
+
+      <!-- Início Banner de Confiança -->
+      <div id="justificativa">
+        <div id="in-justificativa">
+          <h1>Razões para alugar no MotoSync</h1>
+
+          <br>
+
+          <!-- Início Justificativas -->
+          <div id="justificativa-desktop">
+            <div class="fundo">
+              <img src="imagens/Razões/rastreador.png">
+
+              <h1>Segurança</h1>
+              <p>Todas as motos contam com rastreador e seguro inclusos, fique tranquilo, pois sua segurança é nossa maior prioridade.</p>
+            </div>
+
+            <div class="fundo">
+              <img src="imagens/Razões/capacete.png">
+
+              <h1>Você não sai sem capacete</h1>
+              <p>Nós entregamos pra você, um capacete recomendado para o uso específico do modelo da moto que você escolher.</p>
+            </div>
+
+            <div class="fundo">
+              <img src="imagens/Razões/capaceteMoto.png">
+
+              <h1>Sem falar com ninguém</h1>
+              <p>Você pode simplesmente agendar e vir buscar uma moto sem falar com ninguém.</p>
+            </div>
+
+            <div class="fundo">
+              <img src="imagens/Razões/rastreador.png">
+
+              <h1>Andar de nave</h1>
+              <p>Todas as motos contam com rastreador e seguro inclusos, fique tranquilo, pois sua segurança é nossa maior prioridade.</p>
+            </div>
+            <!-- Fim Justificativas -->
+          </div>
+          <div id="carrossel-mobile">
+            <div id="carousel-justificativa-mobile" class="carousel slide" data-bs-ride="carousel">
+              <!-- Início Slide Carrossel -->
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2500">
+                  <img src="imagens/Razões/capacete.png" height="40px" width="auto" class="d-block w-100" alt="Motivo 1">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                  <img src="..." class="d-block w-100" alt="Motivo 2">
+                </div>
+                <div class="carousel-item" data-bs-interval="2500">
+                  <img src="..." class="d-block w-100" alt="Motivo 3">
+                </div>
+              </div>
+              <!-- Fim Slide Carrossel -->
+
+              <!-- Início anterior e próximo slide carrossel -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-justificativa-mobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel-justificativa-mobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <!-- Fim anterior e próximo slide carrossel -->
+            </div>
+          </div>
         </div>
-        <div class="carousel-item">
-            <img src="imagens/Carrossel/mt03-carrossel.png" class="d-block w-100" alt="Categoria 2">
-        </div>
-        <div class="carousel-item">
-            <img src="imagens/Carrossel/vulcan-carrossel.png" class="d-block w-100" alt="Categoria 3">
-        </div>
-        <div class="carousel-item">
-            <img src="imagens/Carrossel/scooter-carrossel.png" class="d-block w-100" alt="Categoria 4">
-        </div>
-        <div class="carousel-item">
-            <img src="imagens/Carrossel/r1000-carrossel.png" class="d-block w-100" alt="Categoria 5">
+        
+
         </div>
       </div>
-    
-      <!-- Início anterior e próximo slide carrossel -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- Fim anterior e próximo slide carrossel -->
- 
-
-    <!-- Script JS para carrossel -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-
-    <br>
-    <br>
-
+    </section>
+    <!-- Fim Confiança-->
   </main>
 
-  <footer>
-    <barra id="footer-principal">
+  <br>
 
-    </barra>
+  <footer>
+    <div class="footer-container" style="text-align: center;">
+      <div class="info-section" style="display: inline-block; margin: 0 10px;">
+        <h3>Aluguel de Motos</h3>
+        <ul>
+          <li>Grupo de Motos</li>
+          <li>Ofertas</li>
+          <li>Rede de Agências</li>
+          <li>Dicas de Viagens</li>
+          <li>Ofertas</li>
+        </ul>
+      </div>
+      <div class="info-section" style="display: inline-block; margin: 0 10px;">
+        <h3>Contato</h3>
+        <p>Informações ao consumidor: Motosync - CNPJ nº 12.345.678/0001-90</p>
+        <p>Sede: SCIA Quadra 15 Conjunto 09 Loja 03 Cidade do Automóvel - Brasília DF CEP 71.250-045</p>
+        <p>Central de Reservas e Assistência a Clientes 24h: (00) 1234-5678</p>
+        <p>Email: contato@motosync.com</p>
+      </div>
+      <div class="info-section" style="display: inline-block; margin: 0 10px;">
+        <h3>Links úteis</h3>
+        <ul>
+          <li><a href="#">Mapa do site</a></li>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Portal da privacidade</a></li>
+          <li><a href="#">Contrato de Aluguel de Motos</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright" style="text-align: center; margin-left: 10px;">
+      <p>© Motosync - Todos direitos reservados</p>
+    </div>
+    <div class="cookie-settings" style="text-align: center; margin-left: 10px;">
+      <a href="#">Configurações de cookies</a>
+    </div>
   </footer>
 
 </body>
