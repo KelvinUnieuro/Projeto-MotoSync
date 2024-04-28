@@ -2,16 +2,38 @@
 
 <html>
 
-	<head>
-	
-		<title>Ajuda</title>
-		<meta charset="utf-8">
+<head>
 
-		<link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Ajuda</title>
+    <meta charset="utf-8">
 
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+
+    <style>
+        #btop1 {
+            background: #4292bf;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            line-height: 2;
+            margin: 0px 5px 0px 0px;
+            height: 30px;
+            width: 200px;
+            border-radius: 15px 15px 0% 0%;
+            float: left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
         <style>
-
-            #btop1{
+            #btop1,
+            #btop2,
+            #btop3,
+            #btop4 {
                 background: #4292bf;
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: bold;
@@ -24,79 +46,158 @@
                 float: left;
             }
 
+            #barra2 {
+                background: #123241;
+                height: 75px;
+                width: calc(100%-2%);
+                box-sizing: border-box;
+                line-height: 1;
+                padding: 0% 15%;
+            }
+
+            .barlog {
+                text-align: center;
+                font-size: 30px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: white;
+                float: left;
+            }
         </style>
 
-	</head>
+        <div id="aba">
+            <div id="btop1">
+                <div><a href="index.html">HOME</a></div>
+            </div><!--Fim btop1-->
 
-	<body>
-        
-        <header>
+            <div id="btop2">
+                <div><a href="alugar.html">ALUGAR</a></div>
+            </div><!--Fim btop2-->
+
+            <div id="btop3">
+                <div><a href="promocoes.html">PROMOÇÕES</a></div>
+            </div><!--Fim btop3-->
+
+            <div id="btop4">
+                <div><a href="passeios.html">PASSEIOS</a></div>
+            </div><!--Fim btop4-->
+        </div><!--Fim aba-->
+
+        <div class="clear"></div>
+
+        <div id="bprincipal">
+            <div class="top">
+                <div class="logo"><a href="index.html">MotoSync</a></div>
+                <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal"
+                            src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img
+                            class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="reservas.html">MINHAS RESERVAS</a>
+                    &nbsp; | &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a>
+                    &nbsp; | <a href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
+            </div><!--Fim top-->
+        </div> <!--Fim bprincipal-->
+
+        <div id="barra2">
+            <h2 class="barlog">Ajuda</h2>
+        </div><!--Fim barra2-->
+
+    </header>
+
+    <main>
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Central de ajuda</title>
             <style>
-                #btop1, #btop2, #btop3, #btop4{
-                  background: #4292bf;
-                  font-family: Arial, Helvetica, sans-serif;
-                  font-weight: bold;
-                  text-align: center;
-                  line-height: 2;
-                  margin: 0px 5px 0px 0px;
-                  height: 30px;
-                  width: 200px;
-                  border-radius: 15px 15px 0% 0%;
-                  float: left;
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #123241;
                 }
-    
-                #barra2 {
-                  background: #123241;
-                  height: 75px;
-                  width: calc(100%-2%);
-                  box-sizing: border-box;
-                  line-height: 1;
-                  padding: 0% 15%;
+
+                .container {
+                    max-width: 800px;
+                    margin: 20px auto;
+                    padding: 20px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 }
-    
-                .barlog{
-                  text-align: center;
-                  font-size: 30px;
-                  font-family: Arial, Helvetica, sans-serif;
-                  font-weight: bold;
-                  color: white;
-                  float: left;
+
+                h1 {
+                    color: #333;
+                    text-align: center;
+                }
+
+                h2 {
+                    color: #666;
+                }
+
+                p {
+                    color: #666;
+                    line-height: 1.6;
                 }
             </style>
-        
-              <div id="aba">
-                <div id="btop1">
-                  <div><a href="index.html">HOME</a></div>
-                </div><!--Fim btop1-->
-        
-                <div id="btop2">
-                    <div><a href="alugar.html">ALUGAR</a></div>
-                </div><!--Fim btop2-->
-        
-                <div id="btop3">
-                    <div><a href="promocoes.html">PROMOÇÕES</a></div>
-                </div><!--Fim btop3-->
-        
-                <div id="btop4">
-                    <div><a href="passeios.html">PASSEIOS</a></div>
-                </div><!--Fim btop4-->
-            </div><!--Fim aba-->
-        
-            <div class="clear"></div>
-        
-            <div id="bprincipal">
-                <div class="top">
-                    <div class="logo"><a href="index.html">MotoSync</a></div>
-                    <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal" src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="reservas.html">MINHAS RESERVAS</a> &nbsp; |  &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a> &nbsp; | <a href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
-                </div><!--Fim top-->
-            </div> <!--Fim bprincipal-->
+        </head>
 
-            <div id="barra2">
-                <h2 class="barlog">Ajuda</h2>
-            </div><!--Fim barra2-->
+        <body>
+            <div class="container">
+                <h1>Central de ajuda</h1>
+                <p>Descubra a liberdade e praticidade de alugar uma moto com a Motosync. Com uma variedade de modelos e
+                    condições flexíveis, estamos aqui para atender às suas necessidades de mobilidade.</p>
+                <h2>Como Funciona</h2>
+                <p>O processo é simples e descomplicado:</p>
+                <ol>
+                    <li>Escolha o modelo de moto desejado e as datas de aluguel.</li>
+                    <li>Faça sua reserva online ou entre em contato conosco para obter assistência personalizada.</li>
+                    <li>Retire sua moto no local designado e aproveite sua viagem!</li>
+                    <li>Devolva a moto nas datas acordadas.</li>
+                </ol>
+                <h2>Benefícios</h2>
+                <ul>
+                    <li>Variedade de modelos disponíveis</li>
+                    <li>Condições flexíveis de aluguel</li>
+                    <li>Atendimento personalizado</li>
+                    <li>Assistência 24 horas</li>
+                    <li>E muito mais!</li>
+                </ul>
+                <h2>Perguntas Frequentes (FAQ)</h2>
+                <h3>1. Como faço para alugar uma moto com a Motosync?</h3>
+                <p>Você pode alugar uma moto conosco de forma rápida e fácil. Basta acessar nosso site, selecionar o
+                    modelo de moto desejado, as datas de aluguel e seguir as instruções para concluir sua reserva. Se
+                    preferir, também estamos disponíveis por telefone para auxiliá-lo durante o processo de reserva.</p>
+                <h3>2. Quais são os documentos necessários para alugar uma moto?</h3>
+                <p>Para alugar uma moto conosco, você precisará apresentar uma carteira de habilitação válida para
+                    motocicletas, além de um documento de identidade oficial com foto. Certifique-se de que seus
+                    documentos estejam em dia para uma experiência de aluguel tranquila.</p>
+                <h3>3. Qual é a política de seguro para os aluguéis de motos?</h3>
+                <p>Todas as nossas motos de aluguel estão cobertas por um seguro automotivo abrangente. Isso inclui
+                    cobertura para danos causados por terceiros, roubo e colisão. Para mais detalhes sobre nossa
+                    política de seguro, entre em contato com nossa equipe de atendimento ao cliente.</p>
+                <h3>4. Posso alterar ou cancelar minha reserva de aluguel de moto?</h3>
+                <p>Sim, é possível fazer alterações ou cancelar sua reserva de aluguel de moto, sujeito aos termos e
+                    condições do contrato. Recomendamos que você entre em contato conosco o mais breve possível para
+                    discutir quaisquer alterações necessárias em sua reserva.</p>
+                <h3>5. Qual é a disponibilidade de modelos de motos para aluguel?</h3>
+                <p>Temos uma variedade de modelos de motos disponíveis para aluguel, desde scooters urbanas até
+                    motocicletas esportivas de alta performance. A disponibilidade de modelos pode variar dependendo da
+                    localização e da demanda, portanto, recomendamos que você faça sua reserva com antecedência para
+                    garantir a disponibilidade do modelo desejado.</p>
+                <p>Entre em contato conosco hoje mesmo para alugar sua moto e começar sua aventura com a Motosync!</p>
 
-        </header>
+                <p>Central de atendimento 24 horas (61) 3355-2090</p>
 
-	</body><!--Fim body-->
+            </div>
+        </body>
+
+        </html>
+
+    </main>
+
+
+</body><!--Fim body-->
 
 </html>
