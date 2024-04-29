@@ -1,104 +1,88 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="pt-BR">
 
 <head>
-
-    <title>Minhas Reservas</title>
-    <meta charset="utf-8">
-
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Reservas</title>
     <style>
-        #btop1 {
-            background: #4292bf;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
+        body {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .formulario {
             text-align: center;
-            line-height: 2;
-            margin: 0px 5px 0px 0px;
-            height: 30px;
-            width: 200px;
-            border-radius: 15px 15px 0% 0%;
-            float: left;
+            border: 2px solid #123241; 
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #123241;
+        }
+
+        .formulario input[type="text"],
+        .formulario input[type="radio"],
+        .formulario button {
+            margin: 10px;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .formulario button {
+            background-color: #ADD8E6;
+            color: rgb(14, 9, 9);
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .formulario button:hover {
+            background-color: #5F9EA0;
         }
     </style>
+    <script>
+        function validarConsulta() {
+            var tipoDocumento = document.querySelector('input[name="tipo_documento"]:checked').value;
+            var documento = document.getElementById("documento").value;
+            var codigoReserva = document.getElementById("codigo_reserva").value;
 
+            if (documento === "") {
+                alert("Por favor, preencha o campo 'Documento'.");
+                return false;
+            }
+
+            if (codigoReserva === "") {
+                alert("Por favor, preencha o campo 'Código da Reserva'.");
+                return false;
+            }
+
+            window.location.href = "pagina_de_consulta.php?tipo_documento=" + tipoDocumento + "&documento=" + documento + "&codigo_reserva=" + codigoReserva;
+        }
+    </script>
 </head>
 
 <body>
-    <header>
-        <style>
-            #btop1, #btop2, #btop3, #btop4{
-              background: #4292bf;
-              font-family: Arial, Helvetica, sans-serif;
-              font-weight: bold;
-              text-align: center;
-              line-height: 2;
-              margin: 0px 5px 0px 0px;
-              height: 30px;
-              width: 200px;
-              border-radius: 15px 15px 0% 0%;
-              float: left;
-            }
-
-            #barra2 {
-              background: #123241;
-              height: 75px;
-              width: calc(100%-2%);
-              box-sizing: border-box;
-              line-height: 1;
-              padding: 0% 15%;
-            }
-
-            .barlog{
-              text-align: center;
-              font-size: 30px;
-              font-family: Arial, Helvetica, sans-serif;
-              font-weight: bold;
-              color: white;
-              float: left;
-            }
-        </style>
-    
-          <div id="aba">
-            <div id="btop1">
-              <div><a href="index.html">HOME</a></div>
-            </div><!--Fim btop1-->
-    
-            <div id="btop2">
-                <div><a href="alugar.html">ALUGAR</a></div>
-            </div><!--Fim btop2-->
-    
-            <div id="btop3">
-                <div><a href="promocoes.html">PROMOÇÕES</a></div>
-            </div><!--Fim btop3-->
-    
-            <div id="btop4">
-                <div><a href="passeios.html">PASSEIOS</a></div>
-            </div><!--Fim btop4-->
-        </div><!--Fim aba-->
-
-        <div class="clear"></div>
-
-        <div id="bprincipal">
-            <div class="top">
-                <div class="logo"><a href="index.html">MotoSync</a></div>
-
-                <div class="ladodireito"> <a href="ajuda.html"><img class="imgbprincipal"
-                            src=imagens/ajuda.png>&nbsp;AJUDA</a></href> &nbsp; | &nbsp;<a href="reservas.html"><img
-                            class="imgmoto" src=imagens/moto.png></a> &nbsp; <a href="">MINHAS RESERVAS</a> &nbsp; |
-                    &nbsp; <a href="contato.html"><img class="imgbprincipal" src=imagens/zap.png>CONTATO</a> &nbsp; | <a
-                        href="login.html"> <img class="imgbprincipal" src=imagens/login.png>LOGIN</a></div>
-            </div><!--Fim top-->
-        </div> <!--Fim bprincipal-->
-
-        <div id="barra2">
-            <h2 class="barlog">Minhas Reservas</h2>
-        </div><!--Fim barra2-->
-
-    </header>
-
-</body><!--Fim body-->
+    <div class="formulario">
+        <h1 style="color: white;">Consultar Reservas</h1>
+        <input type="radio" id="cpf" name="tipo_documento" value="cpf" checked>
+        <label for="cpf" style="color: white;">CPF</label><br>
+        <input type="radio" id="doc_estrangeiro" name="tipo_documento" value="doc_estrangeiro">
+        <label for="doc_estrangeiro" style="color: white;">Doc. Estrangeiro</label><br>
+        <input type="radio" id="passaporte" name="tipo_documento" value="passaporte">
+        <label for="passaporte" style="color: white;">Passaporte</label><br><br>
+        <input type="text" id="documento" name="documento" placeholder="Digite o documento"
+            style="width: 200px;"><br><br>
+        <input type="text" id="codigo_reserva" name="codigo_reserva" placeholder="Código da Reserva"
+            style="width: 200px;"><br><br>
+        <button type="button" onclick="validarConsulta()">CONSULTAR</button>
+    </div>
+</body>
 
 </html>
