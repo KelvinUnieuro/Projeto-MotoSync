@@ -28,6 +28,24 @@
       font-weight: bold;
     }
 
+    #barra2 {
+      background: #123241;
+      height: 75px;
+      width: calc(100%-2%);
+      box-sizing: border-box;
+      line-height: 1;
+      padding: 0% 15%;
+    }
+
+    .barlog {
+      text-align: center;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      color: white;
+      float: left;
+    }
+
     /* Estilos para o rodapé */
     footer {
       text-align: center;
@@ -71,6 +89,10 @@
               src=imagens/login.png>LOGIN</a></div>
       </div><!--Fim top-->
     </div> <!--Fim bprincipal-->
+
+    <div id="barra2">
+      <h2 class="barlog">Passeios</h2>
+    </div><!--Fim barra2-->
   </header>
 
   <!-- Conteúdo da página de passeios -->
@@ -118,20 +140,21 @@
         margin: 15px;
       }
 
-        .card > .row > .description {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            overflow: hidden;
-            height: 80px;
-            width: 520px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition-delay: .3s;
-            transition: all .3s ease;
-            text-align: center;
-            font-size: 16px;
-        }
+      .card>.row>.description {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        height: 80px;
+        width: 520px;
+        opacity: 0;
+        transform: translateY(30px);
+        transition-delay: .3s;
+        transition: all .3s ease;
+        text-align: center;
+        font-size: 16px;
+      }
+
       .card>.row>.description {
         display: flex;
         justify-content: center;
@@ -149,11 +172,12 @@
         /* Ajusta o tamanho da fonte */
       }
 
-        .description p {
-            color: #b0b0ba;
-            padding-top: 5px;
-            margin-bottom: 8px;
-        }
+      .description p {
+        color: #b0b0ba;
+        padding-top: 5px;
+        margin-bottom: 8px;
+      }
+
       .description p {
         color: #b0b0ba;
         padding-top: 5px;
