@@ -667,6 +667,45 @@
           .barraDirecao {
             display: none;
           }
+
+          .barraDirecao-mobile {
+            background: #dddddd;
+            display: flex;
+            flex-direction: row;
+            height: 180px;
+            margin: 70px 0 70px 0;
+            border-radius: 10px;
+          }
+
+          .simbolViagem {
+            height: 60px;
+            padding: 0 0 0 5%;
+          }
+
+          .barraDirecao-mobile p {
+            margin: 10px 0 0 5px;
+            padding: 40px 0 0 0;
+            font-size: 16px;
+            white-space: nowrap;
+          }
+
+          .imgViagem {
+            clip-path: polygon(0% 100%, 75% 100%, 100% 0%, 25% 0%);
+            height: 180px;
+          }
+
+          .botao-passeios {
+            padding: 10px 15px;
+            font-weight: bold;
+            background-color: #205f81;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            top: -30px;
+          }
         }
       </style>
 
@@ -684,12 +723,16 @@
 
       <div class="barraDirecao-mobile">
         <img class="simbolViagem" src=imagens/Direcao/viagem.png>
-        <p>Quer agendar viagens de moto? Dê uma olhada nisso!</p>
+        <div class="direcao-left">
+          <p>Quer agendar<br>viagens de moto?</p>
+          <a href="passeios.html">
+            <div class="botao">
+              <button type="submit" class="botao-passeios">Ver Passeios</button>
+            </div>
+          </a>
+        </div>
         <div class="bloco-imagens">
           <img class="imgViagem" src=imagens/Direcao/tiger-viagem.png>
-          <a href="passeios.html">
-            <div class="botao-para-passeios">Olhar<br>&nbsp;&nbsp;&nbsp;&nbsp;Passeios</div>
-          </a>
           <img class="imgViagem" src=imagens/Direcao/harley.png>
         </div>
       </div>
