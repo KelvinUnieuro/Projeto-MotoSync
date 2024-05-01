@@ -1,27 +1,30 @@
 body {
     background: #FFF;
     overflow: auto;
-    margin: 0; 
+    margin: 0;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: #FFF;
-} 
+}
 
 /* vvvvvvvvvvvvvvvv Header vvvvvvvvvvvvvvvv */
 
 #aba {
-    display: flex; 
-    flex-direction: row; 
+    display: flex;
+    flex-direction: row;
     width: 80%;
     padding: 0% 15%;
     box-sizing: border-box;
     margin: 0;
 }
 
-#btop1, #btop2, #btop3, #btop4{
+#btop1,
+#btop2,
+#btop3,
+#btop4 {
     background: #295872;
     font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
+    font-weight: bold;
     text-align: center;
     line-height: 2;
     margin: 0px 5px 0px 0px;
@@ -39,17 +42,17 @@ body {
     padding: 0% 15%;
 }
 
-.logo{
+.logo {
     text-align: center;
     font-size: 48px;
     font-family: Arial, Helvetica, sans-serif;
-	font-weight: bold;
+    font-weight: bold;
     line-height: 2;
-	color: white;
+    color: white;
     float: left;
 }
 
-.ladodireito{
+.ladodireito {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 12px;
@@ -60,88 +63,90 @@ body {
     width: 50%;
 }
 
-/* Reseta o FLuxo */
-.clear{
+.clear {
     clear: both;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
-.imgbprincipal{
+.imgbprincipal {
     height: 20px;
 }
-.imgmoto{
+
+.imgmoto {
     height: 25px;
 }
 
-a{
-    text-decoration: none; 
+a {
+    text-decoration: none;
 }
 
 /*Estilos para link da logo*/
-.logo a:link{
-    color: #FFF; 
+.logo a:link {
+    color: #FFF;
 }
 
-.logo a:visited{
-    color: #FFF; 
+.logo a:visited {
+    color: #FFF;
 }
 
-.logo a:hover{
-    color: #FFF; 
+.logo a:hover {
+    color: #FFF;
 }
 
-.logo a:active{
-    color: #FFF; 
+.logo a:active {
+    color: #FFF;
 }
 
 /* Estilos para links dentro da classe .ladodireito */
 .ladodireito a:link {
-    color: #FFF; 
+    color: #FFF;
 }
 
 .ladodireito a:visited {
-    color: #FFF; 
+    color: #FFF;
 }
 
 .ladodireito a:hover {
-    color: black; 
+    color: black;
 }
 
 .ladodireito a:active {
-    color: #FFF; 
+    color: #FFF;
 }
 
 /* Estilos para links dentro do elemento com id #aba */
 #aba a:link {
-    color: #FFF; 
+    color: #FFF;
 }
 
 #aba a:visited {
-    color: #FFF; 
+    color: #FFF;
 }
 
 #aba a:hover {
-    color: black; 
+    color: black;
 }
 
 #aba a:active {
-    color: #FFF; 
+    color: #FFF;
 }
 
-@media screen and (max-width: 1252px){
-    #aba, .ladodireito{
+@media screen and (max-width: 1252px) {
+
+    #aba,
+    .ladodireito {
         display: none;
     }
-    
-    #bprincipal{
+
+    #bprincipal {
         padding: 0% 3%;
         height: 80px;
     }
 
-    .logo{
+    .logo {
         font-size: 36px;
     }
 }
@@ -162,4 +167,3 @@ footer {
 }
 
 /* ^^^^^^^^^^^^^^^^ Fim Footer ^^^^^^^^^^^^^^^^ */
-
