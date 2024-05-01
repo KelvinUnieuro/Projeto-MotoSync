@@ -168,6 +168,7 @@
       }
 
       @media screen and (max-width: 1885px) {
+
         #local-devolucao,
         #local-retirada {
           width: 450px;
@@ -360,9 +361,6 @@
 
     <!-- Início Carrossel -->
     <section>
-      <style>
-
-      </style>
       <div id="carrossel">
         <div id="carousel-motos-home" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
           <!-- Início slide carrossel -->
@@ -463,13 +461,13 @@
           margin: 10px;
         }
 
-        @media screen and (max-width: 1252px) {
+        @media screen and (max-width: 1515px) {
           #justificativa-desktop {
             display: none;
           }
 
           #justificativa {
-            height: 300px;
+            height: 340px;
             border-radius: 10px;
           }
 
@@ -483,6 +481,23 @@
 
           #carrossel-mobile {
             display: flex;
+          }
+
+          #carrossel-mobile {
+            justify-content: center;
+          }
+
+          .carousel-inner2 {
+            align-items: center;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .carousel-item {
+            flex: 0 0 auto;
+            width: 100%;
+            text-align: center;
           }
         }
       </style>
@@ -520,7 +535,7 @@
             </div>
 
             <div class="fundo">
-              <img src="imagens/Razões/nave">
+              <img src="imagens/Razões/nave.png">
 
               <h1>Andar de nave</h1>
               <p>Aposto que já pensou em pilotar uma daquelas motos que a gente só vê na TV...</p>
@@ -530,38 +545,46 @@
           <div id="carrossel-mobile">
             <div id="carousel-justificativa-mobile" class="carousel slide" data-bs-ride="carousel">
               <!-- Início Slide Carrossel -->
-              <div class="carousel-inner">
+              <div class="carousel-inner2">
                 <div class="carousel-item active" data-bs-interval="2500">
-                  <img src="imagens/Razões/capacete.png" height="40px" width="auto" class="d-block w-100"
-                    alt="Motivo 1">
+                  <img src="imagens/Razões/rastreador.png" height="200px" width="auto" style="border-radius: 10px;"
+                    class="d-block w-100" alt="Motivo 1">
+                  <p>Conte com toda segurança</p>
                 </div>
                 <div class="carousel-item" data-bs-interval="2500">
-                  <img src="..." class="d-block w-100" alt="Motivo 2">
+                  <img src="imagens/Razões/capacete.png" height="200px" width="auto" style="border-radius: 10px;"
+                    class="d-block w-100" alt="Motivo 2">
+                  <p>Aqui, você não sai sem capacete</p>
                 </div>
                 <div class="carousel-item" data-bs-interval="2500">
-                  <img src="..." class="d-block w-100" alt="Motivo 3">
+                  <img src="imagens/Razões/capaceteMoto.png" height="200px" width="auto" style="border-radius: 10px;"
+                    class="d-block w-100" alt="Motivo 3">
+                  <p>Agende para pegar sua moto sem falar com ninguém</p>
                 </div>
-              </div>
-              <!-- Fim Slide Carrossel -->
+                <div class="carousel-item" data-bs-interval="2500">
+                  <img src="imagens/Razões/nave.png" height="200px" width="auto" style="border-radius: 10px;"
+                    class="d-block w-100" alt="Motivo 4">
+                  <p>Andar nas motos que só vemos na tv, e não são as do jornal</p>
+                </div>
 
-              <!-- Início anterior e próximo slide carrossel -->
-              <button class="carousel-control-prev" type="button" data-bs-target="#carousel-justificativa-mobile"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carousel-justificativa-mobile"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-              <!-- Fim anterior e próximo slide carrossel -->
-            </div>
-          </div>
+                <!-- Início anterior e próximo slide carrossel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-justificativa-mobile"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-justificativa-mobile"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <!-- Fim anterior e próximo slide carrossel -->
+              </div> <!-- Fim carrossel-inner2 -->
+            </div> <!-- Fim carousel-justificativa-mobile -->
+          </div> <!-- Fim carrossel-mobile -->
+
+
         </div>
-
-
-      </div>
       </div>
     </section>
     <!-- Fim Confiança-->
@@ -634,9 +657,31 @@
         .botao-para-passeios:active {
           color: #FFF;
         }
+
+        .barraDirecao-mobile{
+            display: none;
+          }
+
+        @media screen and (max-width: 1515px) {
+          .barraDirecao {
+            display: none;
+          }
+        }
       </style>
 
       <div class="barraDirecao">
+        <img class="simbolViagem" src=imagens/Direcao/viagem.png>
+        <p>Quer agendar viagens de moto? Dê uma olhada nisso!</p>
+        <div class="bloco-imagens">
+          <img class="imgViagem" src=imagens/Direcao/tiger-viagem.png>
+          <a href="passeios.html">
+            <div class="botao-para-passeios">Olhar<br>&nbsp;&nbsp;&nbsp;&nbsp;Passeios</div>
+          </a>
+          <img class="imgViagem" src=imagens/Direcao/harley.png>
+        </div>
+      </div>
+
+      <div class="barraDirecao-mobile">
         <img class="simbolViagem" src=imagens/Direcao/viagem.png>
         <p>Quer agendar viagens de moto? Dê uma olhada nisso!</p>
         <div class="bloco-imagens">
