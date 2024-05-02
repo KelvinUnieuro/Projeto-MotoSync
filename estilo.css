@@ -7,8 +7,7 @@ body {
     color: #FFF;
 }
 
-/* vvvvvvvvvvvvvvvv Header vvvvvvvvvvvvvvvv */
-
+/* ESTILO HEADER */
 #aba {
     display: flex;
     flex-direction: row;
@@ -139,9 +138,8 @@ a {
     display: none;
 }
 
-/* Estilo Menu Mobile*/
+/* ESTILO MOBILE */
 @media screen and (max-width: 1515px) {
-
     #aba,
     .ladodireito {
         display: none;
@@ -160,9 +158,6 @@ a {
         display: flex;
         float: right;
         margin: 10px;
-    }
-
-    .btn-abrir-menu i {
         color: #FFF;
         font-size: 35px;
     }
@@ -180,7 +175,7 @@ a {
 
     .menu-mobile {
         display: none;
-        background: #FFF;
+        background: #295872;
         height: 100vh;
         position: fixed;
         top: 0;
@@ -201,49 +196,55 @@ a {
         display: block;
     }
 
-    .menu-mobile,
     .btn-fechar {
-        padding: 5px;
+        padding: 5px 10px;
+        height: 40px;
     }
 
     .menu-mobile,
     .btn-fechar i {
-        color: #295872;
-        font-size: 30px;
+        color: #FFF;
+        font-size: 20px;
+    }
+
+    .menu-mobile nav {
+        width: 100%;
+        padding-right: 20px;
     }
 
     .menu-mobile nav ul {
         text-align: right;
-        list-style-type: none;
+        margin: 0;
+        padding: 0;
     }
 
-    .menu-mobile nav ul li {
+    .menu-mobile nav ul p {
         margin: 0;
     }
 
-    .menu-mobile nav ul li a {
-        color: #295872;
+    .menu-mobile nav ul p a {
+        color: #FFF;
         font-size: 20px;
         padding: 20px 10px;
         display: block;
         width: 100%;
+        text-decoration: none;
     }
 
-    .menu-mobile nav ul li a:hover {
-        background-color: #295872;
+    .menu-mobile nav ul p a:hover {
+        background-color: #123241;
         color: #FFF;
         width: 100%;
         display: block;
     }
 }
+/* FIM MENU MOBILE*/
 
-/* Fim Estilo Menu Mobile*/
-
-/* ^^^^^^^^^^^^^^^^ Fim Header ^^^^^^^^^^^^^^^^ */
-
+/* FIM HEADER */
 
 
-/* vvvvvvvvvvvvvvvv Header vvvvvvvvvvvvvvvv */
+
+/* ESTILO FOOTER */
 
 footer {
     text-align: center;
@@ -254,4 +255,4 @@ footer {
     margin-top: auto;
 }
 
-/* ^^^^^^^^^^^^^^^^ Fim Footer ^^^^^^^^^^^^^^^^ */
+/* FIM ESTILO FOOTER */
