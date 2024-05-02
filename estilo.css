@@ -179,7 +179,7 @@ a {
     }
 
     .menu-mobile {
-        display: flex;
+        display: none;
         background: #FFF;
         height: 100vh;
         position: fixed;
@@ -193,6 +193,7 @@ a {
     }
 
     .menu-mobile.abrir-menu {
+        display: flex;
         width: 70%;
     }
 
