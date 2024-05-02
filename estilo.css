@@ -134,7 +134,13 @@ a {
     color: #FFF;
 }
 
-@media screen and (max-width: 1252px) {
+.btn-abrir-menu,
+.menu-mobile {
+    display: none;
+}
+
+/* Estilo Menu Mobile*/
+@media screen and (max-width: 1515px) {
 
     #aba,
     .ladodireito {
@@ -149,7 +155,88 @@ a {
     .logo {
         font-size: 36px;
     }
+
+    .btn-abrir-menu {
+        display: flex;
+        float: right;
+        margin: 10px;
+    }
+
+    .btn-abrir-menu i {
+        color: #FFF;
+        font-size: 35px;
+    }
+
+    .overlay-menu {
+        background-color: #00000079;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99998;
+        display: none;
+    }
+
+    .menu-mobile {
+        display: flex;
+        background: #FFF;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        overflow: hidden;
+        transition: .3s;
+        padding: 0;
+    }
+
+    .menu-mobile.abrir-menu {
+        width: 70%;
+    }
+
+    .menu-mobile.abrir-menu ~ .overlay-menu {
+        display: block;
+    }
+
+    .menu-mobile,
+    .btn-fechar {
+        padding: 5px;
+    }
+
+    .menu-mobile,
+    .btn-fechar i {
+        color: #295872;
+        font-size: 30px;
+    }
+
+    .menu-mobile nav ul {
+        text-align: right;
+        list-style-type: none;
+    }
+
+    .menu-mobile nav ul li {
+        margin: 0;
+    }
+
+    .menu-mobile nav ul li a {
+        color: #295872;
+        font-size: 20px;
+        padding: 20px 10px;
+        display: block;
+        width: 100%;
+    }
+
+    .menu-mobile nav ul li a:hover {
+        background-color: #295872;
+        color: #FFF;
+        width: 100%;
+        display: block;
+    }
 }
+
+/* Fim Estilo Menu Mobile*/
 
 /* ^^^^^^^^^^^^^^^^ Fim Header ^^^^^^^^^^^^^^^^ */
 

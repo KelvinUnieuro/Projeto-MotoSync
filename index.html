@@ -12,6 +12,12 @@
   <!-- CSS para carrossel -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Ícones Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <script src="menu.js" defer> </script>
 
 </head>
 
@@ -44,7 +50,7 @@
       </div><!--Fim btop2-->
 
       <div id="btop3">
-        <div><a href="promocoes.html">PROMOÇÕES</a></div>
+        <div><a href="moto.html">MOTOS</a></div>
       </div><!--Fim btop3-->
 
       <div id="btop4">
@@ -62,8 +68,34 @@
             href="">MINHAS RESERVAS</a> &nbsp; | &nbsp; <a href="contato.html"><img class="imgbprincipal"
               src=imagens/zap.png>CONTATO</a> &nbsp; | <a href="login.html"> <img class="imgbprincipal"
               src=imagens/login.png>LOGIN</a></div>
-      </div><!--Fim top-->
-    </div> <!--Fim bprincipal-->
+      </div>
+
+      <div class="btn-abrir-menu" id="btn-menu">
+        <i class="bi bi-list"></i>
+      </div>
+
+      <div class="menu-mobile" id="menu-mobile">
+        <div class="btn-fechar">
+          <i class="bi bi-x-lg"></i>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="alugar.html">Alugar</a></li>
+            <li><a href="reservas.html">Minhas Reservas</a></li>
+            <li><a href="passeios.html">Passeios</a></li>
+            <li><a href="moto.html">Moto</a></li>
+            <li><a href="ajuda.html">Ajuda</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="overlay-menu" id="overlay-menu"></div>
+
+    </div><!--Fim bprincipal -->
+
   </header>
 
   <main>
@@ -748,52 +780,161 @@
       footer {
         background: #295872;
         color: #FFF;
-        height: 300px;
+        height: auto;
+        padding: 0 15%;
       }
 
       .footer-container {
-        text-align: center;
+        text-align: left;
         padding: 10px;
       }
 
       .info-section {
-        display: inline-block;
+        display: flex;
+        line-height: 0;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
       }
 
-      .info-section h3 {
-        font-size: 24px;
-        margin: 0;
-        padding: 0;
+      .footer-container p {
+        line-height: 0;
+        margin: 20px;
+      }
+
+      .info-section a:link {
+        color: #FFF;
+      }
+
+      .info-section a:visited {
+        color: #FFF;
+      }
+
+      .info-section a:hover {
+        color: #FFF;
+      }
+
+      .info-section a:active {
+        color: #FFF;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .info-section-mobile,
+      .info-footer-mobile {
+        display: none;
+      }
+
+      .cookie-settings a:link {
+        color: #FFF;
+      }
+
+      .cookie-settings a:visited {
+        color: #FFF;
+      }
+
+      .cookie-settings a:hover {
+        color: #FFF;
+      }
+
+      .cookie-settings a:active {
+        color: #FFF;
+      }
+
+      @media screen and (max-width: 1515px) {
+        footer {
+          padding: 0 5px;
+        }
+
+        .info-section,
+        .info-footer {
+          display: none;
+        }
+
+        .footer-container {
+          text-align: center;
+          padding: 0;
+        }
+
+        .info-section-mobile {
+          display: flex;
+        }
+
+        .info-section-mobile a:link {
+          color: #FFF;
+        }
+
+        .info-section-mobile a:visited {
+          color: #FFF;
+        }
+
+        .info-section-mobile a:hover {
+          color: #FFF;
+        }
+
+        .info-section-mobile a:active {
+          color: #FFF;
+        }
+
+        .info-footer-mobile {
+          display: flex;
+          justify-content: center;
+        }
+
+        .info-footer-mobile a:link {
+          color: #FFF;
+        }
+
+        .info-footer-mobile a:visited {
+          color: #FFF;
+        }
+
+        .info-footer-mobile a:hover {
+          color: #FFF;
+        }
+
+        .info-footer-mobile a:active {
+          color: #FFF;
+        }
+
       }
     </style>
 
     <div class="footer-container">
+      <div>
+        <h1>MotoSync</h1>
+      </div>
       <div class="info-section">
-        <h3>Aluguel de Motos</h3>
-        <ul>
-          <li>Grupo de Motos</li>
-          <li>Ofertas</li>
-          <li>Rede de Agências</li>
-          <li>Dicas de Viagens</li>
-          <li>Ofertas</li>
-        </ul>
-      </div> <!-- Fim info-section -->
-      <div class="info-section">
-        <h3>Contato</h3>
+        <p><a href="#">Grupo de Motos</a> &nbsp;|&nbsp; <a href="#">Rede de Agências</a> &nbsp;|&nbsp; <a
+            href="passeios.html">Dicas de Viagens</a></p>
+      </div><!-- Fim info-section -->
+
+      <div class="info-section-mobile">
+        <a href="#">Grupo de Motos</a>&nbsp;|&nbsp;<a href="#">Rede de Agências</a>&nbsp;|&nbsp;<a
+          href="passeios.html">Dicas de Viagens</a>
+      </div><!-- Fim info-section-mobile -->
+
+      <div class="info-footer">
         <p>Informações ao consumidor: Motosync - CNPJ nº 12.345.678/0001-90</p>
         <p>Sede: SCIA Quadra 15 Conjunto 09 Loja 03 Cidade do Automóvel - Brasília DF CEP 71.250-045</p>
         <p>Central de Reservas e Assistência a Clientes 24h: (00) 1234-5678</p>
         <p>Email: contato@motosync.com</p>
-      </div><!-- Fim info-section -->
-      <div class="info-section">
-        <h3>Links úteis</h3>
+      </div>
+
+      <br>
+
+      <div class="info-footer-mobile">
         <ul>
-          <li><a href="#">Mapa do site</a></li>
-          <li><a href="#">Termos de uso</a></li>
-          <li><a href="#">Portal da privacidade</a></li>
-          <li><a href="#">Contrato de Aluguel de Motos</a></li>
+          <a href="contato.html">
+            <li>Contato</li>
+          </a>
+          <a href="ajuda.html">
+            <li>Ajuda</li>
+          </a>
         </ul>
-      </div><!-- Fim info-section -->
+      </div>
+
     </div><!-- Fim footer-container -->
     <div class="copyright">
       <p>© Motosync - Todos direitos reservados</p>
