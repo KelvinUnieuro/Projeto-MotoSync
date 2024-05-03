@@ -100,29 +100,32 @@
               src=imagens/login.png>LOGIN</a></div>
       </div>
 
-      <div class="btn-abrir-menu" id="btn-menu">
-        <i class="bi bi-list"></i>
-      </div>
+      <!-- INICIO BARRA LATERAL MOBILE -->
+      <nav>
+        <div class="btn-abrir-menu" id="btn-menu">
+          <i class="bi bi-list"></i>
+        </div>
 
-      <div class="menu-mobile" id="menu-mobile">
-        <nav>
-          <div class="btn-fechar">
-            <i class="bi bi-x-lg"></i>
-          </div>
+        <div class="menu-mobile" id="menu-mobile">
+          <nav>
+            <div class="btn-fechar">
+              <i class="bi bi-x-lg"></i>
+            </div>
 
-          <ul>
-            <p><a href="index.html">Home</a></p>
-            <p><a href="alugar.html">Alugar</a></p>
-            <p><a href="reservas.html">Minhas Reservas</a></p>
-            <p><a href="passeios.html">Passeios</a></p>
-            <p><a href="moto.html">Motos</a></p>
-            <p><a href="ajuda.html">Ajuda</a></p>
-            <p><a href="contato.html">Contato</a></p>
-            <p><a href="login.html">Login</a></p>
-          </ul>
-        </nav>
-      </div>
-      <div class="overlay-menu" id="overlay-menu"></div>
+            <ul>
+              <p><a href="index.html">Home</a></p>
+              <p><a href="alugar.html">Alugar</a></p>
+              <p><a href="reservas.html">Minhas Reservas</a></p>
+              <p><a href="passeios.html">Passeios</a></p>
+              <p><a href="moto.html">Motos</a></p>
+              <p><a href="ajuda.html">Ajuda</a></p>
+              <p><a href="contato.html">Contato</a></p>
+              <p><a href="login.html">Login</a></p>
+            </ul>
+          </nav>
+        </div>
+        <div class="overlay-menu" id="overlay-menu"></div>
+      </nav><!-- FIM BARRA LATERAL MOBILE -->
     </div><!--Fim bprincipal -->
 
     <div id="barra2">
@@ -131,258 +134,405 @@
   </header>
 
   <!-- Conteúdo da página de passeios -->
-  <div class="container">
-    <style>
-      /* Estilos para o conteúdo */
-      .container {
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+  <main>
+    <section>
+      <div class="container">
+        <style>
+          /* Estilos para o conteúdo */
+          .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
 
-      .card {
-        width: 80px;
-        height: 600px;
-        /* Ajuste da altura */
-        border-radius: .75rem;
-        background-size: cover;
-        cursor: pointer;
-        overflow: hidden;
-        border-radius: 2rem;
-        margin: 0 10px;
-        display: flex;
-        align-items: flex-end;
-        transition: .6s cubic-bezier(.28, -0.03, 0, .99);
-        box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
-      }
+          .passeios-desktop {
+            display: flex;
+          }
 
-      .card>.row {
-        color: white;
-        display: flex;
-        flex-wrap: nowrap;
-      }
+          .passeios-mobile {
+            display: none;
+          }
 
-      .card>.row>.icon {
-        background: #223;
-        color: white;
-        border-radius: 50%;
-        width: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 15px;
-      }
+          .card {
+            width: 80px;
+            height: 600px;
+            border-radius: .75rem;
+            background-size: cover;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 2rem;
+            margin: 0 10px;
+            display: flex;
+            align-items: flex-end;
+            transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+            box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+          }
 
-      .card>.row>.description {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        overflow: hidden;
-        height: 80px;
-        width: 520px;
-        opacity: 0;
-        transform: translateY(30px);
-        transition-delay: .3s;
-        transition: all .3s ease;
-        text-align: center;
-        font-size: 16px;
-      }
+          .card>.row {
+            color: white;
+            display: flex;
+            flex-wrap: nowrap;
+          }
 
-      .card>.row>.description {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        overflow: hidden;
-        height: 80px;
-        width: 520px;
-        opacity: 0;
-        transform: translateY(30px);
-        transition-delay: .3s;
-        transition: all .3s ease;
-        text-align: center;
-        /* Centraliza o texto */
-        font-size: 16px;
-        /* Ajusta o tamanho da fonte */
-      }
+          .card>.row>.icon {
+            background: #223;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+          }
 
-      .description p {
-        color: #b0b0ba;
-        padding-top: 5px;
-        margin-bottom: 8px;
-      }
+          .card>.row>.description {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: 80px;
+            width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition-delay: .3s;
+            transition: all .3s ease;
+            text-align: center;
+            font-size: 16px;
+          }
 
-      .description p {
-        color: #b0b0ba;
-        padding-top: 5px;
-        margin-bottom: 8px;
-        /* Adiciona espaçamento entre os itens da lista */
-      }
+          .card>.row>.description {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            height: 80px;
+            width: 520px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition-delay: .3s;
+            transition: all .3s ease;
+            text-align: center;
+            font-size: 16px;
+          }
 
-      .description h4 {
-        text-transform: uppercase;
-      }
+          .description p {
+            color: #b0b0ba;
+            padding-top: 5px;
+            margin-bottom: 8px;
+          }
 
-      input {
-        display: none;
-      }
+          .description p {
+            color: #b0b0ba;
+            padding-top: 5px;
+            margin-bottom: 8px;
+          }
 
-      input:checked+label {
-        width: 600px;
-      }
+          .description h4 {
+            text-transform: uppercase;
+          }
 
-      input:checked+label .description {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-      }
+          input {
+            display: none;
+          }
 
-      .card[for="c1"] {
-        background-image: url('imagens/Passeios/praia.png');
-      }
+          input:checked+label {
+            width: 600px;
+          }
 
-      .card[for="c2"] {
-        background-image: url('imagens/Passeios/montanha.png');
-      }
+          input:checked+label .description {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
 
-      .card[for="c3"] {
-        background-image: url('imagens/Passeios/cidade.png');
-      }
+          .card[for="c1"] {
+            background-image: url('imagens/Passeios/praia.png');
+          }
 
-      .card[for="c4"] {
-        background-image: url('imagens/Passeios/deserto.png');
-      }
+          .card[for="c2"] {
+            background-image: url('imagens/Passeios/montanha.png');
+          }
 
-      .card[for="c5"] {
-        background-image: url('imagens/Passeios/floresta.png');
-      }
+          .card[for="c3"] {
+            background-image: url('imagens/Passeios/cidade.png');
+          }
 
-      /* Estilos para imagens nos cards */
-      .card img {
-        width: 100%;
-        height: auto;
-        display: block;
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-      }
+          .card[for="c4"] {
+            background-image: url('imagens/Passeios/deserto.png');
+          }
 
-      .card:hover img {
-        opacity: 1;
-      }
-    </style>
-    <input type="radio" name="slide" id="c1" checked>
-    <label for="c1" class="card">
-      <div class="row">
-        <div class="icon">1</div>
-        <div class="description">
-          <p>Passeio pela Costa</p>
-          <div class="extended-description">
-            <p>Desfrute de uma viagem pitoresca ao longo da costa, com vistas deslumbrantes do oceano e pitorescas
-              cidades costeiras.</p>
-            <ul>
-              <li>Visita a praias paradisíacas</li>
-              <li>Pausa para um almoço em restaurante à beira-mar</li>
-              <li>Exploração de vilarejos costeiros</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <img src="./img1.jpeg" alt="Passeio pela Costa">
-    </label>
+          .card[for="c5"] {
+            background-image: url('imagens/Passeios/floresta.png');
+          }
 
-    <input type="radio" name="slide" id="c2">
-    <label for="c2" class="card">
-      <div class="row">
-        <div class="icon">2</div>
-        <div class="description">
-          <p>Aventura nas Montanhas</p>
-          <div class="extended-description">
-            <p>Conquiste as estradas sinuosas e desafiadoras das montanhas, explorando paisagens panorâmicas e cenários
-              naturais impressionantes.</p>
-            <ul>
-              <li>Passeio por trilhas naturais</li>
-              <li>Parada para contemplação de cachoeiras</li>
-              <li>Experiência de camping em meio à natureza</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <img src="./img2.jpeg" alt="Aventura nas Montanhas">
-    </label>
+          /* Estilos para imagens nos cards */
+          .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+          }
 
-    <input type="radio" name="slide" id="c3">
-    <label for="c3" class="card">
-      <div class="row">
-        <div class="icon">3</div>
-        <div class="description">
-          <p>Exploração Urbana</p>
-          <div class="extended-description">
-            <p>Descubra a essência das cidades, explorando ruas movimentadas, monumentos históricos e pontos turísticos
-              icônicos.</p>
-            <ul>
-              <li>Passeio guiado por um centro histórico</li>
-              <li>Visita a museus e galerias de arte</li>
-              <li>Parada para degustação de pratos típicos da região</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <img src="./img3.jpeg" alt="Exploração Urbana">
-    </label>
+          .card:hover img {
+            opacity: 1;
+          }
 
-    <input type="radio" name="slide" id="c4">
-    <label for="c4" class="card">
-      <div class="row">
-        <div class="icon">4</div>
-        <div class="description">
-          <p>Aventura no Deserto</p>
-          <div class="extended-description">
-            <p>Explore as vastas extensões do deserto, descubra oásis escondidos e admire o pôr do sol nas dunas.</p>
-            <ul>
-              <li>Passeio de camelo pelo deserto</li>
-              <li>Visita a acampamentos beduínos tradicionais</li>
-              <li>Jantar típico sob as estrelas</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <img src="./img4.jpeg" alt="Aventura no Deserto">
-    </label>
+          @media screen and (max-width: 1515px) {
+            .passeios-mobile {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+            }
 
-    <input type="radio" name="slide" id="c5">
-    <label for="c5" class="card">
-      <div class="row">
-        <div class="icon">5</div>
-        <div class="description">
-          <p>Travessia da Floresta</p>
-          <div class="extended-description">
-            <p>Aventure-se pelas trilhas da floresta, descubra fauna e flora exuberantes e acampe sob a luz das
-              estrelas.</p>
-            <ul>
-              li>Trilha pela densa floresta</li>
-              <li>Observação de animais selvagens</li>
-              <li>Pernoite em barracas de camping</li>
-              < </ul>
-          </div>
-        </div>
-      </div>
-      <img src="imagens/Passeios/riodejaneiro.png" alt="Travessia da Floresta">
-    </label>
-  </div>
+            .passeios-desktop {
+              display: none;
+            }
+
+            .card {
+              width: 400px;
+              height: 80px;
+              border-radius: .75rem;
+              background-size: cover;
+              cursor: pointer;
+              overflow: hidden;
+              border-radius: 2rem;
+              margin: 0 10px;
+              display: flex;
+              align-items: flex-end;
+              transition: height .6s cubic-bezier(.28, -0.03, 0, .99);
+              box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+            }
+
+            .card.clicked {
+              height: 400px;
+            }
+
+            .card>.row {
+              color: white;
+              display: flex;
+              flex-wrap: nowrap;
+            }
+
+            .card>.row>.icon {
+              background: #223;
+              color: white;
+              border-radius: 50%;
+              width: 50px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 15px;
+            }
+
+            .card>.row>.description {
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              overflow: hidden;
+              height: 80px;
+              width: 300px;
+              opacity: 0;
+              transform: translateY(30px);
+              transition-delay: .3s;
+              transition: all .3s ease;
+              text-align: center;
+              font-size: 16px;
+            }
+
+            .description p {
+              color: #b0b0ba;
+              padding-top: 5px;
+              margin-bottom: 8px;
+            }
+
+            .description p {
+              color: #b0b0ba;
+              padding-top: 5px;
+              margin-bottom: 8px;
+            }
+
+            .description h4 {
+              text-transform: uppercase;
+            }
+
+            input {
+              display: none;
+            }
+
+            input:checked+label {
+              height: 400px;
+            }
+
+            input:checked+label .description {
+              opacity: 1 !important;
+              transform: translateY(0) !important;
+            }
+          }
+        </style>
+
+        <!-- INÍCIO CARDS DESKTOP -->
+        <div class="passeios-desktop">
+          <input type="radio" name="slide" id="c1" checked>
+          <label for="c1" class="card">
+            <div class="row">
+              <div class="icon">1</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Desfrute de uma viagem pitoresca ao longo da costa, com vistas deslumbrantes do oceano e pitorescas
+                    cidades costeiras.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c2">
+          <label for="c2" class="card">
+            <div class="row">
+              <div class="icon">2</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Conquiste as estradas sinuosas e desafiadoras das montanhas, explorando paisagens panorâmicas e
+                    cenários
+                    naturais impressionantes.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c3">
+          <label for="c3" class="card">
+            <div class="row">
+              <div class="icon">3</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Descubra a essência das cidades, explorando ruas movimentadas, monumentos históricos e pontos
+                    turísticos
+                    icônicos.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c4">
+          <label for="c4" class="card">
+            <div class="row">
+              <div class="icon">4</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Explore as vastas extensões do deserto, descubra oásis escondidos e admire o pôr do sol nas dunas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c5">
+          <label for="c5" class="card">
+            <div class="row">
+              <div class="icon">5</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Aventure-se pelas trilhas da floresta, descubra fauna e flora exuberantes e acampe sob a luz das
+                    estrelas.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+        </div> <!-- FIM CARDS DESKTOP -->
+
+        <!-- INÍCIO CARDS MOBILE -->
+        <div class="passeios-mobile">
+          <br><br><br><br><br><br>
+          <input type="radio" name="slide" id="c1" checked>
+          <label for="c1" class="card">
+            <div class="row">
+              <div class="icon">1</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Desfrute de uma viagem pitoresca ao longo da costa, com vistas deslumbrantes do oceano e pitorescas
+                    cidades costeiras.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c2">
+          <label for="c2" class="card">
+            <div class="row">
+              <div class="icon">2</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Conquiste as estradas sinuosas e desafiadoras das montanhas, explorando paisagens panorâmicas e
+                    cenários
+                    naturais impressionantes.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c3">
+          <label for="c3" class="card">
+            <div class="row">
+              <div class="icon">3</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Descubra a essência das cidades, explorando ruas movimentadas, monumentos históricos e pontos
+                    turísticos
+                    icônicos.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c4">
+          <label for="c4" class="card">
+            <div class="row">
+              <div class="icon">4</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Explore as vastas extensões do deserto, descubra oásis escondidos e admire o pôr do sol nas dunas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </label>
+
+          <input type="radio" name="slide" id="c5">
+          <label for="c5" class="card">
+            <div class="row">
+              <div class="icon">5</div>
+              <div class="description">
+                <div class="extended-description">
+                  <p>Aventure-se pelas trilhas da floresta, descubra fauna e flora exuberantes e acampe sob a luz das
+                    estrelas.</p>
+                </div>
+              </div>
+            </div>
+          </label>
+          <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              var cards = document.querySelectorAll('.card');
+
+              cards.forEach(function (card) {
+                card.addEventListener('click', function () {
+                  cards.forEach(function (item) {
+                    item.classList.remove('clicked');
+                  });
+                  card.classList.add('clicked');
+                });
+              });
+            });
+          </script>
+        </div> <!-- FIM CARDS MOBILE -->
+      </div> <!-- FIM CONTAINER -->
+    </section>
+  </main>
 
   <footer>
     <p>© MotoSync - Todos direitos reservados</p>
   </footer>
-
-  <script>
-    function showDescription(card) {
-      var cards = document.querySelectorAll('.card');
-      cards.forEach(function (item) {
-        item.classList.remove('clicked');
-      });
-      card.classList.add('clicked');
-    }
-  </script>
 </body><!--Fim body-->
 
 </html>
