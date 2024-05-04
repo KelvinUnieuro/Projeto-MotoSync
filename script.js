@@ -70,7 +70,7 @@ if ('geolocation' in navigator) {
     // Função para converter coordenadas em endereço
     function convertToAddress(latitude, longitude) {
       // Chamada para o serviço de geocodificação reversa do Google Maps
-      fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=AIzaSyCGkUcQ85T7UKSJ7fLsn7EqbkqGoAr8Yo0`)
+      fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=YOURAPIKEY`)
         .then(response => response.json())
         .then(data => {
           // Extrai o endereço do resultado da geocodificação
