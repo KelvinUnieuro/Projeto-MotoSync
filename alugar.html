@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/css/ionicons.min.css">
 
     <!-- Swipe.js -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -394,36 +395,186 @@
                 background: var(--primary);
             }
 
-            /* Estilos do sidebar */
             .sidebar {
+                width: 250px;
                 height: 100%;
-                width: 0;
+                background-color: lightgray;
                 position: fixed;
                 top: 0;
+                right: -250px;
+                transition: right 0.3s ease-in-out;
+                z-index: 9999;
+            }
+
+            .sidebar.open {
+                height: 53vh;
+                width: 50vh;
+                margin: 10px;
                 right: 0;
-                background-color: #111;
-                overflow-x: hidden;
-                transition: 0.5s;
-                z-index: 99999;
+                border-radius: 2rem;
             }
 
             .open-sidebar-btn {
-                background-color: #4CAF50;
-                color: white;
-                padding: 10px 20px;
+                padding: 15px 25px;
+                margin: 10px;
+                background-color: #205f81;
+                color: #fff;
                 border: none;
+                border-radius: 10px;
                 cursor: pointer;
+                border: none;
+            }
+
+            .open-sidebar-btn:hover {
+                background-color: #4292bf;
             }
 
             .close-sidebar-btn {
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
+                font-size: 16px;
+                padding: 5px 15px;
+                margin: 10px;
+                background-color: #205f81;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
                 cursor: pointer;
+                border: none;
+            }
+
+            .close-sidebar-btn:hover {
+                background-color: #4292bf;
+            }
+
+            .in-sidemenu {
+                background-color: #FFF;
+                color: #000;
+                font-weight: bold;
+                border-radius: 2rem;
+                height: 87%;
+                padding: 20px;
+                margin: 10px;
+            }
+
+            .form-container {
+                display: flex;
+                background-color: #123241;
+                flex-direction: row;
+                height: 230px;
+                margin: 0 0 2% 0;
+                padding: 0% 15% 1% 15%;
+                width: calc(100%-2%);
+            }
+
+            .inside {
+                width: 100%;
+                color: #FFF
+            }
+
+            .form-container h2 {
+                text-align: left;
+            }
+
+            #mobile {
+                display: none;
+            }
+
+            form {
+                display: flex;
+                flex-direction: row;
+                margin-bottom: 5px;
+                align-items: center;
+            }
+
+            .aluguel {
+                display: flex;
+                flex-direction: column;
+                float: left;
+                width: 100%;
+                margin: 10px 0px 0px 0px;
+                border: #b8b8b8;
+            }
+
+            .aluguel2 {
+                display: flex;
+                flex-direction: column;
+                float: left;
+                width: 40%;
+                margin: 10px 40px 0px 0px;
+                border: #b8b8b8;
+            }
+
+            #local-devolucao,
+            #local-retirada {
+                padding: 15px;
+                width: 500px;
+                float: left;
+                border-radius: 10px;
+            }
+
+            #data-retirada,
+            #data-devolucao,
+            #hora-retirada,
+            #hora-devolucao {
+                padding: 15px;
+                width: 250px;
+                float: left;
+                border-radius: 10px;
+                resize: none;
+            }
+
+            #data-retirada:focus,
+            #data-devolucao:focus,
+            #hora-retirada:focus,
+            #hora-devolucao:focus,
+            #local-devolucao:focus,
+            #local-retirada:focus {
+                outline: none;
+            }
+
+            .botao {
+                padding: 50px 0px 0px 0px;
+            }
+
+            .botao-aluguel {
+                padding: 15px 25px;
+                margin: 10px;
+                background-color: #205f81;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+            }
+
+            .botao-aluguel:hover {
+                background-color: #4292bf;
+            }
+
+            .confirm-aluguel {
+                padding: 15px 25px;
+                margin: 10px;
+                background-color: #205f81;
+                color: #fff;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                border: none;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .confirm-aluguel:hover {
+                background-color: #4292bf;
+            }
+
+            @media screen and (max-width: 2000px) {
+                .sidebar.open {
+                    height: 100vh;
+                }
             }
         </style>
+
         <section id="tranding">
             <!-- INICIO BANNER GRUPO DE MOTOS STREET -->
             <div class="container">
@@ -455,6 +606,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -483,6 +635,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -510,6 +663,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -537,6 +691,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -564,6 +719,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -591,6 +747,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -618,6 +775,8 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
+                                    <!-- Botão para abrir o sidebar -->
                                 </div>
                             </div>
                         </div>
@@ -668,6 +827,7 @@
                                                     <ion-icon name="star"></ion-icon>
                                                 </div>
                                             </h3>
+                                            <button class="open-sidebar-btn">Alugar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -696,6 +856,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -723,6 +884,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -750,6 +912,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -777,6 +940,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -804,6 +968,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -831,6 +996,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -881,6 +1047,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -909,6 +1076,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -936,6 +1104,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -963,6 +1132,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -990,6 +1160,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1017,6 +1188,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1044,6 +1216,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1094,6 +1267,7 @@
                                                     <ion-icon name="star"></ion-icon>
                                                 </div>
                                             </h3>
+                                            <button class="open-sidebar-btn">Alugar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -1122,6 +1296,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1149,6 +1324,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1176,6 +1352,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1203,6 +1380,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1230,6 +1408,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1257,6 +1436,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1307,6 +1487,7 @@
                                                 <ion-icon name="star"></ion-icon>
                                             </div>
                                         </h3>
+                                        <button class="open-sidebar-btn">Alugar</button>
                                     </div>
                                 </div>
                             </div>
@@ -1335,6 +1516,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1362,6 +1544,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1389,6 +1572,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1416,6 +1600,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1443,6 +1628,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1470,6 +1656,7 @@
                                             <ion-icon name="star"></ion-icon>
                                         </div>
                                     </h3>
+                                    <button class="open-sidebar-btn">Alugar</button>
                                 </div>
                             </div>
                         </div>
@@ -1488,12 +1675,52 @@
                 </div>
             </div>
             <!-- FIM BANNER GRUPO DE MOTOS CUSTOM -->
+
+            <!-- SIDEBAR -->
+            <div class="sidemenu">
+                <nav id="sidebar" class="sidebar">
+                    <button class="close-sidebar-btn">X</button>
+                    <div class="in-sidemenu">
+                        <h2>Reservar moto</h2>
+                        <div class="form-aluguel">
+                            <div class="aluguel">
+                                <form><label for="local-retirada">Local</label></form>
+                                <form><input type="text" id="local-retirada"
+                                        placeholder="Onde você quer retirar a moto?"></form>
+                                <form><input type="text" id="local-devolucao"
+                                        placeholder="Onde você quer devolver a moto?"></form>
+                            </div> <!-- Fim aluguel -->
+
+                            <div class="aluguel2">
+                                <form><label for="data-retirada">Data</label></form>
+                                <form><input type="text" id="data-retirada" placeholder="Data da retirada"
+                                        onfocus="(this.type='date')">
+                                </form>
+                                <form><input type="text" id="data-devolucao" placeholder="Data da devolução"
+                                        onfocus="(this.type='date')">
+                                </form>
+                            </div> <!-- Fim aluguel2 -->
+
+                            <div class="aluguel2">
+                                <form><label for="hora-retirada">Horário</label></form>
+                                <form><input type="text" id="hora-retirada" placeholder="Hora da retirada"
+                                        onfocus="(this.type='time')">
+                                </form>
+                                <form><input type="text" id="hora-devolucao" placeholder="Hora da devolução"
+                                        onfocus="(this.type='time')">
+                                </form>
+                            </div> <!-- Fim aluguel2 -->
+                        </div>
+                        <div class="btn-conf">
+                            <button class="confirm-aluguel">Alugar</button>
+                        </div>
+                </nav>
+            </div>
         </section>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src="script.js"></script>
     </main>
 </body><!--Fim body-->
 

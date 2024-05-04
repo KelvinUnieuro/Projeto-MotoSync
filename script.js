@@ -37,4 +37,24 @@ var TrandingSlider = new Swiper('.tranding-slider', {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const openSidebarButtons = document.querySelectorAll(".open-sidebar-btn");
+  const closeSidebarButton = document.querySelector(".close-sidebar-btn");
+  const sidebar = document.getElementById("sidebar");
+  const overlaySidebar = document.getElementById("overlay-sidebar");
 
+  openSidebarButtons.forEach(function (button) {
+    button.addEventListener('click', () => {
+      sidebar.classList.add("open");
+    });
+  });
+
+  closeSidebarButton.addEventListener('click', () => {
+    sidebar.classList.remove("open");
+  });
+
+  closeSidebarButton.addEventListener('click', () => {
+    sidebar.classList.remove("open");
+    overlaySidebar.style.display = "none";
+  });
+});
