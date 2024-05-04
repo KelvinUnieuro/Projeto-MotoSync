@@ -184,9 +184,12 @@
             }
 
             .container {
-                max-width: 124rem;
                 padding: 0 1rem;
-                margin: 0 auto;
+                margin: 0;
+            }
+
+            .container2 {
+                background-color: #bebebe;
             }
 
             .text-center {
@@ -389,6 +392,36 @@
 
             .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
                 background: var(--primary);
+            }
+
+            /* Estilos do sidebar */
+            .sidebar {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                z-index: 99999;
+            }
+
+            .open-sidebar-btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .close-sidebar-btn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+                cursor: pointer;
             }
         </style>
         <section id="tranding">
@@ -604,27 +637,54 @@
             </div>
             <!-- FIM BANNER GRUPO DE MOTOS STREET -->
 
-            <br><br>
-
             <!-- INICIO BANNER GRUPO DE MOTOS NAKED -->
-            <div class="container">
-                <h1 class="text-center section-heading">Modelos Naked</h1>
-            </div>
-            <div class="container">
-                <div class="swiper tranding-slider">
-                    <div class="swiper-wrapper">
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Naked/mt03-alugar.png" alt="Tranding">
+            <div class="container2">
+                <div class="container">
+                    <h1 class="text-center section-heading">Modelos Naked</h1>
+                </div>
+                <div class="container">
+                    <div class="swiper tranding-slider">
+                        <div class="swiper-wrapper">
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Naked/mt03-alugar.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <div class="barra-info">
+                                        <h1 class="valor-moto">R$:80,00</h1>
+                                        <p>Por dia</p>
+                                        <div class="tranding-slide-content-bottom">
+                                            <h2 class="moto-name">
+                                                &nbsp;Yamaha MT-03&nbsp;
+                                            </h2>
+                                            <h3 class="moto-rating">
+                                                <span>4.5</span>
+                                                <div class="rating">
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tranding-slide-content">
-                                <div class="barra-info">
-                                    <h1 class="valor-moto">R$:80,00</h1>
+                            <!-- FIM DO SLIDE -->
+
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Naked/cb500f.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:70,00</h1>
                                     <p>Por dia</p>
                                     <div class="tranding-slide-content-bottom">
                                         <h2 class="moto-name">
-                                            &nbsp;Yamaha MT-03&nbsp;
+                                            &nbsp;Honda CB 500F&nbsp;
                                         </h2>
                                         <h3 class="moto-rating">
                                             <span>4.5</span>
@@ -639,180 +699,153 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Naked/cb500f.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:70,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Honda CB 500F&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Naked/z400.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:65,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Kawasaki Z400&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Naked/z400.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:65,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Kawasaki Z400&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Naked/mt07.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:100,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Yamaha MT-07&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Naked/mt07.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:100,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Yamaha MT-07&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Naked/cb650r.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:130,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Honda CB 650r&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Naked/cb650r.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:130,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Honda CB 650r&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Naked/mt09.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:120,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Yamaha MT-09&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Naked/mt09.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:120,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Yamaha MT-09&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Naked/triumph.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:80,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Triple Triumph 765&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- FIM DO SLIDE -->
                         </div>
-                        <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Naked/triumph.png" alt="Tranding">
+                        <div class="tranding-slider-control">
+                            <div class="swiper-button-prev slider-arrow">
+                                <ion-icon name="arrow-back-outline"></ion-icon>
                             </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:80,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Triple Triumph 765&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
+                            <div class="swiper-button-next slider-arrow">
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <!-- FIM DO SLIDE -->
-                    </div>
-
-                    <div class="tranding-slider-control">
-                        <div class="swiper-button-prev slider-arrow">
-                            <ion-icon name="arrow-back-outline"></ion-icon>
-                        </div>
-                        <div class="swiper-button-next slider-arrow">
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -1031,24 +1064,53 @@
             <!-- FIM BANNER GRUPO DE MOTOS TRAIL -->
 
             <!-- INICIO BANNER GRUPO DE MOTOS SPORT -->
-            <div class="container">
-                <h1 class="text-center section-heading">Modelos Sport</h1>
-            </div>
-            <div class="container">
-                <div class="swiper tranding-slider">
-                    <div class="swiper-wrapper">
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Sport/r3.png" alt="Tranding">
+            <div class="container2">
+                <div class="container">
+                    <h1 class="text-center section-heading">Modelos Sport</h1>
+                </div>
+                <div class="container">
+                    <div class="swiper tranding-slider">
+                        <div class="swiper-wrapper">
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Sport/r3.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <div class="barra-info">
+                                        <h1 class="valor-moto">R$:190,00</h1>
+                                        <p>Por dia</p>
+                                        <div class="tranding-slide-content-bottom">
+                                            <h2 class="moto-name">
+                                                &nbsp;Yamaha R3&nbsp;
+                                            </h2>
+                                            <h3 class="moto-rating">
+                                                <span>4.5</span>
+                                                <div class="rating">
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                    <ion-icon name="star"></ion-icon>
+                                                </div>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tranding-slide-content">
-                                <div class="barra-info">
-                                    <h1 class="valor-moto">R$:190,00</h1>
+                            <!-- FIM DO SLIDE -->
+
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Sport/cbr650r.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:350,00</h1>
                                     <p>Por dia</p>
                                     <div class="tranding-slide-content-bottom">
                                         <h2 class="moto-name">
-                                            &nbsp;Yamaha R3&nbsp;
+                                            &nbsp;CBR 650r&nbsp;
                                         </h2>
                                         <h3 class="moto-rating">
                                             <span>4.5</span>
@@ -1063,180 +1125,153 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Sport/cbr650r.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:350,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;CBR 650r&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Sport/s1000rr.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:550,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;BMW S 1000RR&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Sport/s1000rr.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:550,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;BMW S 1000RR&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Sport/r7.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:400,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Yamaha R7&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Sport/r7.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:400,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Yamaha R7&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Sport/h2.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:650,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Ninja H2&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Sport/h2.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:650,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Ninja H2&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Sport/panigale.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:700,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Ducati Panigale V4 S&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
+                            <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Sport/panigale.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:700,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Ducati Panigale V4 S&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                            <!-- INÍCIO DO SLIDE -->
+                            <div class="swiper-slide tranding-slide">
+                                <div class="tranding-slide-img">
+                                    <img src="imagens/Alugar/Sport/r9.png" alt="Tranding">
+                                </div>
+                                <div class="tranding-slide-content">
+                                    <h1 class="valor-moto">R$:550,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Yamaha R9&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- FIM DO SLIDE -->
                         </div>
-                        <!-- FIM DO SLIDE -->
 
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/Sport/r9.png" alt="Tranding">
+                        <div class="tranding-slider-control">
+                            <div class="swiper-button-prev slider-arrow">
+                                <ion-icon name="arrow-back-outline"></ion-icon>
                             </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:550,00</h1>
-                                <p>Por dia</p>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="moto-name">
-                                        &nbsp;Yamaha R9&nbsp;
-                                    </h2>
-                                    <h3 class="moto-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
+                            <div class="swiper-button-next slider-arrow">
+                                <ion-icon name="arrow-forward-outline"></ion-icon>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
-                        <!-- FIM DO SLIDE -->
-                    </div>
-
-                    <div class="tranding-slider-control">
-                        <div class="swiper-button-prev slider-arrow">
-                            <ion-icon name="arrow-back-outline"></ion-icon>
-                        </div>
-                        <div class="swiper-button-next slider-arrow">
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </div>
-                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
