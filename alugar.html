@@ -147,6 +147,7 @@
         </div><!--Fim bprincipal -->
 
         <div id="barra2">
+            <br>
             <h2 class="barlog">Alugar</h2>
         </div><!--Fim barra2-->
     </header>
@@ -166,7 +167,8 @@
             }
 
             :root {
-                --primary: #ec994b;
+                --primary: #295872;
+                --second: #d67729;
                 --white: #ffffff;
                 --bg: #f5f5f5;
             }
@@ -174,43 +176,6 @@
             html {
                 font-size: 62.5%;
                 font-family: "Montserrat", sans-serif;
-                scroll-behavior: smooth;
-            }
-
-            @media (min-width: 1440px) {
-                html {
-                    zoom: 1.5;
-                }
-            }
-
-            @media (min-width: 2560px) {
-                html {
-                    zoom: 1.7;
-                }
-            }
-
-            @media (min-width: 3860px) {
-                html {
-                    zoom: 2.5;
-                }
-            }
-
-            ::-webkit-scrollbar {
-                width: 1.3rem;
-            }
-
-            ::-webkit-scrollbar-thumb {
-                border-radius: 1rem;
-                background: #797979;
-                transition: all 0.5s ease-in-out;
-            }
-
-            ::-webkit-scrollbar-thumb:hover {
-                background: #222224;
-            }
-
-            ::-webkit-scrollbar-track {
-                background: #f9f9f9;
             }
 
             body {
@@ -299,7 +264,7 @@
                 right: 2rem;
                 width: 130px;
                 color: #FFF;
-                border-radius: 15px;
+                border-radius: 8px;
             }
 
             .tranding-slide-content .tranding-slide-content-bottom {
@@ -309,23 +274,47 @@
                 color: var(--white);
             }
 
-            .food-rating {
+            .moto-rating {
                 padding-top: 1rem;
                 display: flex;
                 gap: 1rem;
             }
 
             .container h2 {
-                color: #123241;
+                background-color: #295872;
+                text-align: center;
+                color: #FFF;
+                width: auto;
+                border-radius: 8px;
+            }
+
+            .container p {
+                text-align: center;
+                color: #000;
+                font-weight: bold;
+                position: absolute;
+                top: 5rem;
+                right: 2rem;
+                width: 130px;
             }
 
             .rating ion-icon {
-                color: var(--primary);
+                color: var(--second);
+            }
+
+            span {
+                color: #000
             }
 
             .swiper-slide-shadow-left,
             .swiper-slide-shadow-right {
                 display: none;
+            }
+
+            .barra-info {
+                background-color: #295872;
+                width: 45rem;
+                z-index: 9999;
             }
 
             .tranding-slider-control {
@@ -413,24 +402,27 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fan160.png" alt="Tranding">
+                                <img src="imagens/Alugar/Street/fan160.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="valor-moto">R$:80,00</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Special Pizza
-                                    </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
+                                <div class="barra-info">
+                                    <h1 class="valor-moto">R$:80,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Honda Fan 160cc&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -439,15 +431,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/factor150.png" alt="Tranding">
+                                <img src="imagens/Alugar/Street/factor150.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
                                 <h1 class="valor-moto">R$:70,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Meat Ball
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha Factor 150cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -465,15 +458,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/biz125.png" alt="Tranding">
+                                <img src="imagens/Alugar/Street/biz125.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
                                 <h1 class="valor-moto">R$:65,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Burger
+                                    <h2 class="moto-name">
+                                        &nbsp;Honda Biz 125cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -491,15 +485,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz15.png" alt="Tranding">
+                                <img src="imagens/Alugar/Street/fz15.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
                                 <h1 class="valor-moto">R$:100,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Frish Curry
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha Fazer FZ15&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -517,15 +512,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/twister300.png" alt="Tranding">
+                                <img src="imagens/Alugar/Street/twister300.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
                                 <h1 class="valor-moto">R$:130,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Pane Cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Honda Cb Twister 300cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -543,15 +539,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz25.png" alt="Tranding">
+                                <img src="imagens/Alugar/Street/fz25.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
                                 <h1 class="valor-moto">R$:120,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Vanilla cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha Fazer FZ25&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -569,15 +566,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/pcx.png" alt="Tranding">
+                                <img src="imagens/Alugar/Street/pcx.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
                                 <h1 class="valor-moto">R$:80,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Straw Cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Honda PCX&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -610,7 +608,7 @@
 
             <!-- INICIO BANNER GRUPO DE MOTOS NAKED -->
             <div class="container">
-                <h1 class="text-center section-heading">Tranding food</h1>
+                <h1 class="text-center section-heading">Modelos Naked</h1>
             </div>
             <div class="container">
                 <div class="swiper tranding-slider">
@@ -618,15 +616,45 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fan160.png" alt="Tranding">
+                                <img src="imagens/Alugar/Naked/mt03-alugar.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="valor-moto">$20</h1>
+                                <div class="barra-info">
+                                    <h1 class="valor-moto">R$:80,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Yamaha MT-03&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIM DO SLIDE -->
+
+                        <!-- INÍCIO DO SLIDE -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="imagens/Alugar/Naked/cb500f.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                                <h1 class="valor-moto">R$:70,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Special Pizza
+                                    <h2 class="moto-name">
+                                        &nbsp;Honda CB 500F&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -644,15 +672,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/factor150.png" alt="Tranding">
+                                <img src="imagens/Alugar/Naked/z400.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="valor-moto">$20</h1>
+                                <h1 class="valor-moto">R$:65,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Meat Ball
+                                    <h2 class="moto-name">
+                                        &nbsp;Kawasaki Z400&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -670,15 +699,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/biz125.png" alt="Tranding">
+                                <img src="imagens/Alugar/Naked/mt07.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="valor-moto">$40</h1>
+                                <h1 class="valor-moto">R$:100,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Burger
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha MT-07&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -696,15 +726,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz15.png" alt="Tranding">
+                                <img src="imagens/Alugar/Naked/cb650r.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="valor-moto">$15</h1>
+                                <h1 class="valor-moto">R$:130,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Frish Curry
+                                    <h2 class="moto-name">
+                                        &nbsp;Honda CB 650r&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -722,15 +753,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/twister300.png" alt="Tranding">
+                                <img src="imagens/Alugar/Naked/mt09.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="valor-moto">$15</h1>
+                                <h1 class="valor-moto">R$:120,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Pane Cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha MT-09&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -748,41 +780,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz25.png" alt="Tranding">
+                                <img src="imagens/Alugar/Naked/triumph.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="valor-moto">$20</h1>
+                                <h1 class="valor-moto">R$:80,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Vanilla cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Triple Triumph 765&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
-
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/pcx.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="valor-moto">$8</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Straw Cake
-                                    </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -813,7 +820,7 @@
 
             <!-- INICIO BANNER GRUPO DE MOTOS TRAIL -->
             <div class="container">
-                <h1 class="text-center section-heading">Tranding food</h1>
+                <h1 class="text-center section-heading">Modelos Trail</h1>
             </div>
             <div class="container">
                 <div class="swiper tranding-slider">
@@ -821,15 +828,45 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fan160.png" alt="Tranding">
+                                <img src="imagens/Alugar/Trail/tiger.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <div class="barra-info">
+                                    <h1 class="valor-moto">R$:310,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Triumph Tiger 900cc&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIM DO SLIDE -->
+
+                        <!-- INÍCIO DO SLIDE -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="imagens/Alugar/Trail/sahara.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                                <h1 class="valor-moto">R$:110,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Special Pizza
+                                    <h2 class="moto-name">
+                                        &nbsp;Honda Sahara 300cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -847,15 +884,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/factor150.png" alt="Tranding">
+                                <img src="imagens/Alugar/Trail/lander.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <h1 class="valor-moto">R$:110,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Meat Ball
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha Lander 250cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -873,15 +911,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/biz125.png" alt="Tranding">
+                                <img src="imagens/Alugar/Trail/g310.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$40</h1>
+                                <h1 class="valor-moto">R$:160,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Burger
+                                    <h2 class="moto-name">
+                                        &nbsp;G310 Rally&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -899,15 +938,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz15.png" alt="Tranding">
+                                <img src="imagens/Alugar/Trail/cb500x.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
+                                <h1 class="valor-moto">R$:190,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Frish Curry
+                                    <h2 class="moto-name">
+                                        &nbsp;Honda CB 500x&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -925,15 +965,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/twister300.png" alt="Tranding">
+                                <img src="imagens/Alugar/Trail/versys.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
+                                <h1 class="valor-moto">R$:300,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Pane Cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Kawasaki Versys 1000cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -951,41 +992,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz25.png" alt="Tranding">
+                                <img src="imagens/Alugar/Trail/tracer.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <h1 class="valor-moto">R$:250,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Vanilla cake
+                                    <h2 class="moto-name">
+                                        &nbsp;MT-09 Tracer&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
-
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/pcx.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$8</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Straw Cake
-                                    </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1010,14 +1026,13 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-
                 </div>
             </div>
             <!-- FIM BANNER GRUPO DE MOTOS TRAIL -->
 
             <!-- INICIO BANNER GRUPO DE MOTOS SPORT -->
             <div class="container">
-                <h1 class="text-center section-heading">Tranding food</h1>
+                <h1 class="text-center section-heading">Modelos Sport</h1>
             </div>
             <div class="container">
                 <div class="swiper tranding-slider">
@@ -1025,15 +1040,45 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fan160.png" alt="Tranding">
+                                <img src="imagens/Alugar/Sport/r3.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <div class="barra-info">
+                                    <h1 class="valor-moto">R$:190,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Yamaha R3&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIM DO SLIDE -->
+
+                        <!-- INÍCIO DO SLIDE -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="imagens/Alugar/Sport/cbr650r.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                                <h1 class="valor-moto">R$:350,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Special Pizza
+                                    <h2 class="moto-name">
+                                        &nbsp;CBR 650r&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1051,15 +1096,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/factor150.png" alt="Tranding">
+                                <img src="imagens/Alugar/Sport/s1000rr.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <h1 class="valor-moto">R$:550,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Meat Ball
+                                    <h2 class="moto-name">
+                                        &nbsp;BMW S 1000RR&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1077,15 +1123,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/biz125.png" alt="Tranding">
+                                <img src="imagens/Alugar/Sport/r7.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$40</h1>
+                                <h1 class="valor-moto">R$:400,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Burger
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha R7&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1103,15 +1150,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz15.png" alt="Tranding">
+                                <img src="imagens/Alugar/Sport/h2.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
+                                <h1 class="valor-moto">R$:650,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Frish Curry
+                                    <h2 class="moto-name">
+                                        &nbsp;Ninja H2&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1129,15 +1177,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/twister300.png" alt="Tranding">
+                                <img src="imagens/Alugar/Sport/panigale.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
+                                <h1 class="valor-moto">R$:700,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Pane Cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Ducati Panigale V4 S&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1155,41 +1204,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz25.png" alt="Tranding">
+                                <img src="imagens/Alugar/Sport/r9.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <h1 class="valor-moto">R$:550,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Vanilla cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha R9&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
-
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/pcx.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$8</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Straw Cake
-                                    </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1214,14 +1238,13 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-
                 </div>
             </div>
             <!-- FIM BANNER GRUPO DE MOTOS SPORT -->
 
             <!-- INICIO BANNER GRUPO DE MOTOS CUSTOM -->
             <div class="container">
-                <h1 class="text-center section-heading">Tranding food</h1>
+                <h1 class="text-center section-heading">Modelos Custom</h1>
             </div>
             <div class="container">
                 <div class="swiper tranding-slider">
@@ -1229,15 +1252,45 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fan160.png" alt="Tranding">
+                                <img src="imagens/Alugar/Custom/meteor.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <div class="barra-info">
+                                    <h1 class="valor-moto">R$:300,00</h1>
+                                    <p>Por dia</p>
+                                    <div class="tranding-slide-content-bottom">
+                                        <h2 class="moto-name">
+                                            &nbsp;Hoyal Enfield Super Meteor 650cc&nbsp;
+                                        </h2>
+                                        <h3 class="moto-rating">
+                                            <span>4.5</span>
+                                            <div class="rating">
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                                <ion-icon name="star"></ion-icon>
+                                            </div>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIM DO SLIDE -->
+
+                        <!-- INÍCIO DO SLIDE -->
+                        <div class="swiper-slide tranding-slide">
+                            <div class="tranding-slide-img">
+                                <img src="imagens/Alugar/Custom/xvs1300.png" alt="Tranding">
+                            </div>
+                            <div class="tranding-slide-content">
+                                <h1 class="valor-moto">R$:750,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Special Pizza
+                                    <h2 class="moto-name">
+                                        &nbsp;Yamaha XVS 1300cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1255,15 +1308,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/factor150.png" alt="Tranding">
+                                <img src="imagens/Alugar/Custom/vulcan.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <h1 class="valor-moto">R$:300,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Meat Ball
+                                    <h2 class="moto-name">
+                                        &nbsp;Kawasaki Vulcan 650cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1281,15 +1335,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/biz125.png" alt="Tranding">
+                                <img src="imagens/Alugar/Custom/classic.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$40</h1>
+                                <h1 class="valor-moto">R$:160,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Burger
+                                    <h2 class="moto-name">
+                                        &nbsp;Royal Enfield Classic 300&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1307,15 +1362,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz15.png" alt="Tranding">
+                                <img src="imagens/Alugar/Custom/harley114.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
+                                <h1 class="valor-moto">R$:550,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Frish Curry
+                                    <h2 class="moto-name">
+                                        &nbsp;Harley Davidson 114 Bob Fat&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1333,15 +1389,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/twister300.png" alt="Tranding">
+                                <img src="imagens/Alugar/Custom/shotigun.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$15</h1>
+                                <h1 class="valor-moto">R$:450,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Pane Cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Royal Enfield Shotgun 650cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1359,41 +1416,16 @@
                         <!-- INÍCIO DO SLIDE -->
                         <div class="swiper-slide tranding-slide">
                             <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/fz25.png" alt="Tranding">
+                                <img src="imagens/Alugar/Custom/bonneville.png" alt="Tranding">
                             </div>
                             <div class="tranding-slide-content">
-                                <h1 class="food-price">$20</h1>
+                                <h1 class="valor-moto">R$:450,00</h1>
+                                <p>Por dia</p>
                                 <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Vanilla cake
+                                    <h2 class="moto-name">
+                                        &nbsp;Triumph Bonneville 900cc&nbsp;
                                     </h2>
-                                    <h3 class="food-rating">
-                                        <span>4.5</span>
-                                        <div class="rating">
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                            <ion-icon name="star"></ion-icon>
-                                        </div>
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- FIM DO SLIDE -->
-
-                        <!-- INÍCIO DO SLIDE -->
-                        <div class="swiper-slide tranding-slide">
-                            <div class="tranding-slide-img">
-                                <img src="imagens/Alugar/pcx.png" alt="Tranding">
-                            </div>
-                            <div class="tranding-slide-content">
-                                <h1 class="food-price">$8</h1>
-                                <div class="tranding-slide-content-bottom">
-                                    <h2 class="food-name">
-                                        Straw Cake
-                                    </h2>
-                                    <h3 class="food-rating">
+                                    <h3 class="moto-rating">
                                         <span>4.5</span>
                                         <div class="rating">
                                             <ion-icon name="star"></ion-icon>
@@ -1418,7 +1450,6 @@
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
-
                 </div>
             </div>
             <!-- FIM BANNER GRUPO DE MOTOS CUSTOM -->
