@@ -37,16 +37,17 @@ function showSavedCoordinates(inputId) {
 
   // Adicionar o container ao corpo do documento
   document.body.appendChild(container);
-
-  /// Adicionando eventos de clique aos inputs local-retirada e local-devolucao
-  document.getElementById('local-retirada').addEventListener('click', function () {
-    showSavedCoordinates('local-retirada');
-  });
-
-  document.getElementById('local-devolucao').addEventListener('click', function () {
-    showSavedCoordinates('local-devolucao');
-  });
 }
+
+// Adicionando eventos de clique aos inputs local-retirada e local-devolucao
+document.getElementById('local-retirada').addEventListener('click', function () {
+  showSavedCoordinates('local-retirada');
+});
+
+document.getElementById('local-devolucao').addEventListener('click', function () {
+  showSavedCoordinates('local-devolucao');
+});
+
 
 if ('geolocation' in navigator) {
   const watcher = navigator.geolocation.watchPosition(function (position) {
